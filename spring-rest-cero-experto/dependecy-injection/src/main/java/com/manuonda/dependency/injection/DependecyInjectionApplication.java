@@ -7,9 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.manuonda.dependency.injection.attribute.Coche;
+import com.manuonda.dependency.injection.profiles.EnvironmentService;
 import com.manuonda.dependency.injection.qualifiers.Animal;
 import com.manuonda.dependency.injection.qualifiers.Nido;
 import com.manuonda.dependency.injection.qualifiers.Perro;
+import com.manuonda.dependency.injection.scopes.EjemploScopeService;
 
 @SpringBootApplication
 public class DependecyInjectionApplication {
@@ -31,6 +33,12 @@ public class DependecyInjectionApplication {
 	 
 	 Nido nido = context.getBean(Nido.class);
      nido.imprimir();
+     
+     EnvironmentService environmentService =  context.getBean(EnvironmentService.class);
+     log.info("Environment Service {}",environmentService.getEnvironment());
+     
+	 EjemploScopeService ejemploService = context.getBean(EjemploScopeService.class);
+	 EjemploScopeService ejemploService1 = context.getBean(EjemploScopeService.class);
 	 
 	}
 
