@@ -10,7 +10,7 @@ public interface ITaskService {
 	
 	 Task insert(Task task);
 	
-	 void delete(Task task);
+	 void delete(Long id );
 	
-	 Task update(Task task);
+	 Task update(Task task, Long id );
 }
