@@ -1,16 +1,18 @@
-package com.formacionbdi.springboot.app.productos;
+package com.formacionbdi.springboot.app.item;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @EnableEurekaClient
+@EnableFeignClients
 @SpringBootApplication
-public class SpringBootServiciosProductosApplication {
+public class SpringBootServiciosItemsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootServiciosProductosApplication.class, args);
+		SpringApplication.run(SpringBootServiciosItemsApplication.class, args);
 	}
 
 }
