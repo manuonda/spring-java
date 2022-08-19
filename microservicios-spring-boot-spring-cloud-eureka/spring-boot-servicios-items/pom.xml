@@ -58,6 +58,10 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
 
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

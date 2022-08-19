@@ -1,6 +1,7 @@
 server:
   port: 9000
   
+# definition de eureka-server  
 eureka:
   client:
     fetch-registry: true
@@ -10,14 +11,36 @@ eureka:
   instance:
     hostname: localhost
       
+# configuration gateway discovery      
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
       routes:
       - id: servicio-productos
         uri: lb://servicio-productos
         predicates:
         - Path=/api/productos/**
+        # Reglas filter : Documentation => 
+        # - Method=GET, POST  #methods de peticion tiene que ser GET o Post 
+        # - Query= color, azul #methos query params color = azul
+        # - Header=Content-Type, application/json  #method content-type application/json
+        filters:
+        - name: Ejemplo  #filter Ejemplo + ""GatewayFilterFactory""
+          args:
+            mensaje: Hola mi personaje preferido
+            cookieNombre: usuario
+            cookieValor: AndresGuzman
+      - id: servicio-items
+        uri: lb://servicio-items
+        predicates:
+        - Path=/api/items/**
+        filters:
+        - AddRequestHeader=token-reqeust, 123456
+        - AddResponseHeader=token-response, 123456789
+        - AddRequestParameter=nombre, andres
   application:
     name: server-gateway
     
