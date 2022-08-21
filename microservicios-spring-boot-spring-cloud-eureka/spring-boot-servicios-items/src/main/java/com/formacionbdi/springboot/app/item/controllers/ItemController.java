@@ -1,6 +1,7 @@
 package com.formacionbdi.springboot.app.item.controllers;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ import com.formacionbdi.springboot.app.item.models.Producto;
 import com.formacionbdi.springboot.app.item.services.ItemService;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 
 
 
@@ -60,6 +62,28 @@ public class ItemController {
 				.run(() -> itemService.findById(id, cantidad), e ->metodoAlternativo(id, cantidad, e ));
 	}
 	
+
+	/**
+	 * Annotations solamente usamos 
+	 * application.yaml o properties es la configuraicon y lo toma desde alli
+	 * @param id
+	 * @param cantidad
+	 * @return
+	 */
+	
+	@CircuitBreaker(name="items",fallbackMethod = "metodoAlternativo") //application.yaml 
+	@GetMapping("/ver2/{id}/cantidad/{cantidad}")
+	public Item itemDetalle2(@PathVariable Long id, @PathVariable Integer cantidad) {
+		return itemService.findById(id, cantidad);
+	}
+	
+	@CircuitBreaker(name="items", fallbackMethod = "metodoAlternativo2") //application.yaml 
+	@TimeLimiter(name="items") //application.yaml 
+	@GetMapping("/ver3/{id}/cantidad/{cantidad}")
+	public CompletableFuture<Item> itemDetalle3(@PathVariable Long id, @PathVariable Integer cantidad) {
+		return CompletableFuture.supplyAsync(() -> itemService.findById(id, cantidad));
+	}
+	
 	
 
 	public Item metodoAlternativo(Long id, Integer cantidad, Throwable e ) {
@@ -72,5 +96,18 @@ public class ItemController {
 		producto.setPrecio(500.00);
 		item.setProducto(producto);
 		return item;
+	}
+	
+	
+	public CompletableFuture<Item> metodoAlternativo2(Long id, Integer cantidad, Throwable e ) {
+		logger.info(e.getMessage());
+		Item item = new Item();
+		Producto producto = new Producto();
+		item.setCantidad(cantidad);
+		producto.setId(id);
+		producto.setNombre("Camara Sony");
+		producto.setPrecio(500.00);
+		item.setProducto(producto);
+		return CompletableFuture.supplyAsync( ()-> item);
 	}
 }
