@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:/home/manuonda/projects/spring-project-courses/microservicios-spring-boot-spring-cloud-eureka/config
+server:
+  port: 8888
