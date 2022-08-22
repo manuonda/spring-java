@@ -5,6 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: file:/home/manuonda/projects/spring-project-courses/microservicios-spring-boot-spring-cloud-eureka/config
+          uri: file://home/manuonda/projects/spring-project-courses/config
 server:
   port: 8888
+  servlet: 
+    context-path: /config
