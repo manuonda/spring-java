@@ -5,7 +5,10 @@ spring:
     config:
       server:
         git:
-          uri: file://home/manuonda/projects/spring-project-courses/config
+          #uri: file:///home/manuonda/projects/configuracion-spring-boot
+          uri: https://github.com/manuonda/spring-project-courses
+          searchPaths: config
+           
 server:
   port: 8888
   servlet: 
