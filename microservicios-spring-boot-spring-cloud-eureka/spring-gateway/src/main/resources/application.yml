@@ -62,10 +62,10 @@ spring:
         uri: lb://servicio-items
         predicates:
         - Path=/api/items/**
-        filters:
-        - AddRequestHeader=token-reqeust, 123456
-        - AddResponseHeader=token-response, 123456789
-        - AddRequestParameter=nombre, andres
+#        filters:
+#        - AddRequestHeader=token-reqeust, 123456
+#        - AddResponseHeader=token-response, 123456789
+#        - AddRequestParameter=nombre, andres
   application:
     name: server-gateway
     

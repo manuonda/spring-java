@@ -7,6 +7,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,7 +17,7 @@ import com.formacionbdi.springboot.app.item.models.Item;
 import com.formacionbdi.springboot.app.item.models.Producto;
 
 
-@Service("serviceRest")
+@Service("serviceRestTemplate")
 public class ItemServiceImple implements ItemService{
 
 	
@@ -33,6 +36,38 @@ public class ItemServiceImple implements ItemService{
 		pathVariables.put("id", id.toString());
 		Producto producto = clienteRest.getForObject("http://localhost:8001/ver/{id}",Producto.class, pathVariables);
 		return new Item(producto, cantidad);
+	}
+
+	@Override
+	public Producto save(Producto producto) {
+		HttpEntity<Producto> body = new HttpEntity<Producto>(producto);
+		// se crea un exchange de productos
+		// obtiene la respuesta en un tipo de Producto
+		ResponseEntity<Producto> response = clienteRest.exchange("http://servicio-productos/create", HttpMethod.POST, body, Producto.class);
+		Producto productoResponse = response.getBody();
+		return productoResponse;
+	}
+
+	@Override
+	public Producto update(Producto producto, Long id) {
+		HttpEntity<Producto> body = new HttpEntity<Producto>(producto);
+		// se crea un exchange de productos
+		// obtiene la respuesta en un tipo de Producto
+		Map<String, String> pathVariables = new HashMap<>();
+		pathVariables.put("id", id.toString());
+		ResponseEntity<Producto> response = clienteRest.exchange("http://servicio-productos/update/{id}", HttpMethod.PUT, body, Producto.class , pathVariables);
+		Producto productoResponse = response.getBody();
+		return productoResponse;
+	}
+
+	@Override
+	public void delete(Long id) {
+		
+		// se crea un exchange de productos
+		// obtiene la respuesta en un tipo de Producto
+		Map<String, String> pathVariables = new HashMap<>();
+		pathVariables.put("id", id.toString());
+		 clienteRest.delete("http://servicio-productos/delete/{id}", pathVariables);
 	}
 
 	

@@ -7,7 +7,7 @@ spring:
         git:
           #uri: file:///home/manuonda/projects/configuracion-spring-boot
           uri: https://github.com/manuonda/spring-project-courses
-          searchPaths: config
+          searchPaths: config #busca en el path de configuracion folder config los archivos de applications
            
 server:
   port: 8888

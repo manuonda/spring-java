@@ -14,11 +14,17 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.ResponseEntity.BodyBuilder;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.item.models.Item;
@@ -48,7 +54,7 @@ public class ItemController {
 
 	@Autowired
 	// con el qualifier me permite indicar que servicio trabajar
-	@Qualifier("serviceFeign")
+	@Qualifier("serviceRestTemplate")
 	private ItemService itemService;
 	
 
@@ -141,5 +147,25 @@ public class ItemController {
 		
 		return new ResponseEntity<HashMap<String,String>>(json, HttpStatus.OK);
 		
+	}
+	
+	
+	@PostMapping("/create")
+	@ResponseStatus(HttpStatus.CREATED)
+	public ResponseEntity<?> create(@RequestBody Producto producto) {
+		Producto newProduct = this.itemService.save(producto);
+		return ResponseEntity.status(HttpStatus.CREATED).body(newProduct);
+	}
+	
+	@PutMapping("/update/{idProducto}")
+	public ResponseEntity<?> update(@RequestBody Producto producto, @PathVariable("id") Long idProducto) {
+		Producto updateProducto = this.itemService.update(producto,  idProducto);
+		return ResponseEntity.status(HttpStatus.CREATED).body(updateProducto);
+	}
+	
+	@DeleteMapping("/delete/{idProducto}")
+	public BodyBuilder delete(@PathVariable("idProducto") Long idProducto){
+		this.itemService.delete(idProducto);
+		return ResponseEntity.status(HttpStatus.NO_CONTENT);
 	}
 }
