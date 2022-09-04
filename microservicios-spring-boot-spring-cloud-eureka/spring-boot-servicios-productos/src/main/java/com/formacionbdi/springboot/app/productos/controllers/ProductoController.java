@@ -19,8 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.formacionbdi.springboot.app.productos.models.entity.Producto;
+
 import com.formacionbdi.springboot.app.productos.models.services.IProductoService;
+import com.spring.app.commons.models.entity.Producto;
 
 @RestController
 @RequestMapping("/api/productos")
@@ -61,9 +62,9 @@ public class ProductoController {
 	
 	@PostMapping("/create")
 	@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<?> create(@RequestBody Producto producto) {
+	public Producto create(@RequestBody Producto producto) {
 		Producto newProduct = this.iProductoService.save(producto);
-		return ResponseEntity.status(HttpStatus.CREATED).body(newProduct);
+		return newProduct;
 	}
 	
 	@PutMapping("/update/{idProducto}")

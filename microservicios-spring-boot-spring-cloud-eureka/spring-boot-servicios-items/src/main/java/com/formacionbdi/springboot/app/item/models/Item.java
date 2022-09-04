@@ -1,5 +1,7 @@
 package com.formacionbdi.springboot.app.item.models;
 
+import com.spring.app.commons.models.entity.Producto;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

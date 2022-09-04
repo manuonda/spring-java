@@ -6,7 +6,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.formacionbdi.springboot.app.item.models.Producto;
+import com.spring.app.commons.models.entity.Producto;
+
 
 @FeignClient(name ="servicio-productos" , url="localhost:8001")
 public interface ProductoClientRest {

@@ -28,15 +28,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.formacionbdi.springboot.app.item.models.Item;
-import com.formacionbdi.springboot.app.item.models.Producto;
 import com.formacionbdi.springboot.app.item.services.ItemService;
+import com.spring.app.commons.models.entity.Producto;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import io.vavr.collection.Map;
 
 
-@RefreshScope
+//@RefreshScope
 @RestController
 @RequestMapping("/api/items")
 public class ItemController {
@@ -65,13 +65,20 @@ public class ItemController {
 	public String home() {
 		return "hola mundo";
 	}
+//	@GetMapping("/listar")
+//	public List<Item> listar(
+//			@RequestParam(name="nombre" , required=false) String nombre, 
+//			@RequestHeader(name="token-request", required =  false) String token
+//	 ){
+//		System.out.println("Nombre : " + nombre);
+//		System.out.println("token-request: " +token);
+//		return itemService.findAll();
+//	}
+	
 	@GetMapping("/listar")
 	public List<Item> listar(
-			@RequestParam(name="nombre" , required=false) String nombre, 
-			@RequestHeader(name="token-request", required =  false) String token
+			
 	 ){
-		System.out.println("Nombre : " + nombre);
-		System.out.println("token-request: " +token);
 		return itemService.findAll();
 	}
 	
@@ -152,9 +159,9 @@ public class ItemController {
 	
 	@PostMapping("/create")
 	@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<?> create(@RequestBody Producto producto) {
+	public Producto create(@RequestBody Producto producto) {
 		Producto newProduct = this.itemService.save(producto);
-		return ResponseEntity.status(HttpStatus.CREATED).body(newProduct);
+		return newProduct;
 	}
 	
 	@PutMapping("/update/{idProducto}")

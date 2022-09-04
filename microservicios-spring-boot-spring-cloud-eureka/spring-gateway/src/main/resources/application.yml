@@ -51,13 +51,13 @@ spring:
         # - Method=GET, POST  #methods de peticion tiene que ser GET o Post 
         # - Query= color, azul #methos query params color = azul
         # - Header=Content-Type, application/json  #method content-type application/json
-        filters:
-        - CircuitBreaker=productos
-        - name: Ejemplo  #filter Ejemplo + ""GatewayFilterFactory""
-          args:
-            mensaje: Hola mi personaje preferido
-            cookieNombre: usuario
-            cookieValor: AndresGuzman
+#        filters:
+#        - CircuitBreaker=productos
+#        - name: Ejemplo  #filter Ejemplo + ""GatewayFilterFactory""
+#          args:
+#            mensaje: Hola mi personaje preferido
+#            cookieNombre: usuario
+#            cookieValor: AndresGuzman
       - id: servicio-items
         uri: lb://servicio-items
         predicates:

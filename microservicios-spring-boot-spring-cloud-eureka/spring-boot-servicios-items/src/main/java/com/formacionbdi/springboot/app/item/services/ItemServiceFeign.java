@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.formacionbdi.springboot.app.item.clientes.ProductoClientRest;
 import com.formacionbdi.springboot.app.item.models.Item;
-import com.formacionbdi.springboot.app.item.models.Producto;
+import com.spring.app.commons.models.entity.Producto;
 
 
 @Service("serviceFeign")
