@@ -1,0 +1,1 @@
+export { default as UserSingupPage } from './UserSingupPage';
