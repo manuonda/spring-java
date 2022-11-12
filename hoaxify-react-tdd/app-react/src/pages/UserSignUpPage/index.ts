@@ -1,1 +1,1 @@
-export { default as UserSignUpPage } from './UserSignUpPage.js';
+export * from "./UserSignUpPage"
