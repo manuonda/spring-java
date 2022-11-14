@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/no-render-in-setup */
-import { queryByPlaceholderText, render , screen} from "@testing-library/react";
+import { fireEvent, queryByPlaceholderText, render , screen} from "@testing-library/react";
 import UserSignUpPage from "./UserSignUpPage";
 
 describe("UserSignUpPage" ,() => {
@@ -40,15 +40,43 @@ describe("UserSignUpPage" ,() => {
 
      it('has input password', () => {
       render(<UserSignUpPage></UserSignUpPage>)
-      const passwordInput = screen.queryByPlaceholderText(/Your password/i);
+      const passwordInput = screen.queryByPlaceholderText(/Your password/);
       expect(passwordInput).toBeInTheDocument();
      })
 
-     it('has password type for password input', () => {
-        render(<UserSignUpPage></UserSignUpPage>)
-        const passworType = screen.queryByPlaceholderText(/Your password/i);
-        expect(passworType).toHaveAttribute('type','password');
+    
+     it('hast input for password repeat' ,() => {
+      render(<UserSignUpPage />)
+      const passwordRepeatType = screen.queryByPlaceholderText(/Repeat your password/);
+      expect(passwordRepeatType).toBeInTheDocument();
+   })
+
+     it('hast input for password repeat input' ,() => {
+        render(<UserSignUpPage />)
+        const passwordRepeatType = screen.queryByPlaceholderText(/Repeat your password/);
+        expect(passwordRepeatType).toHaveAttribute('type','password');
      })
 
-     
+     it('has submit button' , () => {
+          render(<UserSignUpPage></UserSignUpPage>)
+          const button = screen.queryByRole('button');
+          expect(button).toBeInTheDocument();
+     })
+  
+});
+
+describe('interactions', () => {
+  
+    it('sets the displayName value into state' ,() => {
+       render(<UserSignUpPage />)
+       const displayNameInput = screen.queryByPlaceholderText(/Your display name/);
+       const changeEvent = {
+          target : {
+            value : 'my-display-name'
+          }
+       }
+       fireEvent.change(displayNameInput, changeEvent);
+       expect(displayNameInput).toHaveValue('my-display-name');
+    })
+
 });

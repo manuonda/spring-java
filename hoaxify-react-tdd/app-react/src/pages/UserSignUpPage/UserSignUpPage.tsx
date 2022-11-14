@@ -7,6 +7,8 @@ const UserSignUpPage : React.FC<UserSignUpPageInterface> = () => {
 		  <input type="text" placeholder='Your display name'></input>
 		  <input type="text" placeholder='Your username'></input>
 		  <input  placeholder='Your password' type="password"></input>
+		  <input  placeholder='Repeat your password' type="password"></input>
+		  <button type="submit">Enviar</button>
 		 </>);
 };
 
