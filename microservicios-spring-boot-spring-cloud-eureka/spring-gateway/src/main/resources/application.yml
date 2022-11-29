@@ -43,10 +43,17 @@ spring:
         locator:
           enabled: true
       routes:
+      
+      - id: servicio-usuarios
+        uri: lb://servicio-usuarios
+        predicates:
+        - Path=/usuarios/**
+        
       - id: servicio-productos
         uri: lb://servicio-productos
         predicates:
         - Path=/api/productos/**
+      
         # Reglas filter : Documentation => 
         # - Method=GET, POST  #methods de peticion tiene que ser GET o Post 
         # - Query= color, azul #methos query params color = azul
