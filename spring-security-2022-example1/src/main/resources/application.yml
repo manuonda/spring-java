@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: server-application-security
+  security:
+    user:
+      name: sa
+      password: sa
+      roles:
+      - manager
+server:
+  port: 8090
+  
