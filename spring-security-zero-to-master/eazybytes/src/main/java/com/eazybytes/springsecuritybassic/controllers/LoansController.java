@@ -1,16 +1,30 @@
 package com.eazybytes.springsecuritybassic.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.eazybytes.springsecuritybassic.models.Loans;
+import com.eazybytes.springsecuritybassic.repository.LoanRepository;
+
+import java.util.List;
+
 @RestController
-@RequestMapping("/loans")
 public class LoansController {
 
-	@GetMapping("/")
-	public String getLoans() {
-		return "Get Loans";
-	}
+    @Autowired
+    private LoanRepository loanRepository;
+
+    @GetMapping("/myLoans")
+    public List<Loans> getLoanDetails(@RequestParam int id) {
+        List<Loans> loans = loanRepository.findByCustomerIdOrderByStartDtDesc(id);
+        if (loans != null ) {
+            return loans;
+        }else {
+            return null;
+        }
+    }
+
 }

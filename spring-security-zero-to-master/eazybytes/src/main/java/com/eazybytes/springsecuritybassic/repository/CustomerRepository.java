@@ -7,11 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.eazybytes.springsecuritybassic.models.Customer;
 
-
 @Repository
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
-	List<Customer> findByEmail(String email);
-	
-
+    List<Customer> findByEmail(String email);
+    
 }

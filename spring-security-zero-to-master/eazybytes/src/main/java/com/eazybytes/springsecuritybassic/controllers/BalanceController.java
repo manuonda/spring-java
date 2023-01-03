@@ -1,16 +1,30 @@
 package com.eazybytes.springsecuritybassic.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.eazybytes.springsecuritybassic.models.AccountTransactions;
+import com.eazybytes.springsecuritybassic.repository.AccountTransactionsRepository;
+
+import java.util.List;
+
 @RestController
-@RequestMapping("/balance")
 public class BalanceController {
 
-	@GetMapping("/myBalance")
-	public String getBalanceDetails() {
-		return "Here are the balance details";
-	}
+    @Autowired
+    private AccountTransactionsRepository accountTransactionsRepository;
+
+    @GetMapping("/myBalance")
+    public List<AccountTransactions> getBalanceDetails(@RequestParam int id) {
+        List<AccountTransactions> accountTransactions = accountTransactionsRepository.
+                findByCustomerIdOrderByTransactionDtDesc(id);
+        if (accountTransactions != null ) {
+            return accountTransactions;
+        }else {
+            return null;
+        }
+    }
 }
