@@ -1,6 +1,8 @@
 package com.demo.oauth;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +47,7 @@ public class UserServiceImplTest {
     	user.put("lastName", "Kargopoly");
     	
     	// Act
-    	String createdUserId = userService.createUser(user);
+    	 createdUserId = userService.createUser(user);
     	
     	// Assert
     	assertNotNull(createdUserId, "User id should not be null");
@@ -66,13 +68,27 @@ public class UserServiceImplTest {
     	//Act
     	Map updateUserDetails = userService.updateUser(createdUserId, newUserDetails);
     	
+    	// Assert 
+    	assertEquals(newUserDetails.get("firstName"), updateUserDetails.get("firstName"),
+    			"Returned value of user's first name is incorrect");
+    	assertEquals(newUserDetails.get("lastName"), updateUserDetails.get("lastName"),
+    			"The returned value of user's last name is incorrect");
+    	
     }
 
     @Test
     @Order(3)
     @DisplayName("Find user works")
     void testGetUserDetails_whenProvidedWithValidUserId_returnsUserDetails() {
-
+  
+    	// Act 
+    	Map userDetails = userService.getUserDetails(createdUserId);
+    	
+    	// Assert 
+    	assertNotNull(userDetails, "User details should not be null");
+    	assertEquals(createdUserId, userDetails.get("userId"),
+    			"Returned user details contains incorrect user id");
+    	
     }
 
     @Test
@@ -80,6 +96,12 @@ public class UserServiceImplTest {
     @DisplayName("Delete user works")
     void testDeleteUser_whenProvidedWithValidUserId_returnsUserDetails() {
 
+    	//Act
+    	userService.deleteUser(createdUserId);
+    	
+    	//Assert 
+    	assertNull(userService.getUserDetails(createdUserId),
+    			"User  should not been found");
     }
 
 }
