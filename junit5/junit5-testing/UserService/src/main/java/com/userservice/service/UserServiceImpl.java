@@ -8,11 +8,12 @@ public class UserServiceImpl implements UserService{
 
 	UsersRepository usersRepository;
 	
+	EmailVerificationService emailVerificationService;
 	
 	
-	
-	public UserServiceImpl(UsersRepository usersRepository) {
+	public UserServiceImpl(UsersRepository usersRepository , EmailVerificationService emailVerificationService) {
 		super();
+		this.emailVerificationService = emailVerificationService;
 		this.usersRepository = usersRepository;
 	}
 
@@ -38,12 +39,25 @@ public class UserServiceImpl implements UserService{
 		}
 	
 
-		boolean isUserCreated = usersRepository.save(user);
+		boolean isUserCreated = false;
+		try {
+	      isUserCreated = 	usersRepository.save(user); 		
+		} catch (RuntimeException e) {
+			// TODO: handle exception
+			throw new UserServiceException(e.getMessage());
+		}
 		if(!isUserCreated ) throw new UserServiceException("Could not create User");
-			
+		
+
+		try {
+			emailVerificationService.scheduleEmailConfirmation(user);
+		} catch (Exception e) {
+			throw new UserServiceException(e.getMessage());
+		}
 		return user;
 	}
-
+	
+	
 
 
 }
