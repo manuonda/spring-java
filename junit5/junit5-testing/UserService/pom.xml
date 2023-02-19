@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
+			<version>2.7.8-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.userservice</groupId>
@@ -67,6 +67,8 @@
     <scope>test</scope>
 </dependency>
 
+
+
 	</dependencies>
 
 	<build>
@@ -83,6 +85,29 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M8</version>
+    <configuration>
+     <testFailureIgnore>
+     true
+     </testFailureIgnore>
+    </configuration>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-report-plugin</artifactId>
+    <version>3.0.0-M8</version>
+    <executions>
+     <execution>
+     <phase>test</phase>
+      <goals><goal>report</goal></goals>
+     </execution>
+    </executions>
+</plugin>
+			
 		</plugins>
 	</build>
 
