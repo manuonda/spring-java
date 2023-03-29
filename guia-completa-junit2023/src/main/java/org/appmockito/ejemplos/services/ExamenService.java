@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.appmockito.ejemplos.models.Examen;
 import org.appmockito.ejemplos.repository.IExamenRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -13,9 +14,9 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ExamenService implements IExamenService {
 
+	@Autowired
 	private IExamenRepository repository;
 
-	private Examen examen;
 	
 	@Override
 	public List<Examen> findAll() {

@@ -36,7 +36,7 @@ public class ExamenServiceImplTest {
 		//given - dado o condicion previa de configuracion
 		
 		//when accion o el comportamiento que vamos a probar 
-		 Examen examenSaved=
+	
 		//then - verificar la salida 
 	}
 	
