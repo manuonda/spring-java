@@ -111,12 +111,12 @@ public class ExamenRepositoryTest {
     	  
     	 //when 
     	  this.repository.save(examen);
-    	  Examen examenFindByNombre =  this.repository.findByNombre("Prueba");
+    	  Optional<Examen> examenFindByNombre =  this.repository.findByNombre("Prueba");
     	  
     	 //then
     	  assertThat(examenFindByNombre).isNotNull();
     	  assertNotNull(examenFindByNombre);
-    	  assertThat(examenFindByNombre.getNombre()).isEqualTo("Prueba");
+    	  assertThat(examenFindByNombre.get().getNombre()).isEqualTo("Prueba");
      }
 	
      
@@ -131,8 +131,8 @@ public class ExamenRepositoryTest {
     	 
     	 //then
     	 org.junit.jupiter.api.Assertions.assertThrows(NoSuchElementException.class,()-> {
-    		 Examen examenFindByNombre = this.repository.findByNombre("informacion");
-    	     examenFindByNombre.getNombre();
+    		 Optional<Examen> examenFindByNombre = this.repository.findByNombre("informacion");
+    	     examenFindByNombre.get().getNombre();
     	 }, "Not elemento found by nombre informacion");
      }
      

@@ -1,6 +1,7 @@
 package org.appmockito.ejemplos.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.appmockito.ejemplos.models.Examen;
 
@@ -8,7 +9,7 @@ public interface IExamenService {
 
 	List<Examen> findAll();
 	
-	Examen findByExamenPorNombre(String nombre);
+	Optional<Examen> findByExamenPorNombre(String nombre);
 	
 	Examen save(Examen examen);
 	
