@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.github.javafaker.Faker;
 
 @RestController
-@RequestMapping("/api/v1/dragonball-failover/characters")
+@RequestMapping("/api/v1/db-failover/dragonball/characters")
 public class DragonBallController {
 
 	

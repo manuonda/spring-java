@@ -18,12 +18,28 @@ public class GateWayConfig {
 				
 				.build();
 	}
-	@
-	Bean
+	@Bean
 	@Profile("localhost-eureka")
 	public RouteLocator configLocalEureka(RouteLocatorBuilder builder) {
 		return builder.routes()
 				.route( r -> r.path("/api/v1/dragonball/*").uri("lb://development"))
+				.route(r -> r.path("/api/v1/gameofthrones/*").uri("lb://spring-client-gameofthrones"))
+				
+				.build();
+	}
+	
+	@Bean
+	@Profile("localhost-eureka-cb")
+	public RouteLocator configLocalEurekaCB(RouteLocatorBuilder builder) {
+		return builder.routes()
+				.route( r -> r.path("/api/v1/dragonball/*")
+						.filters(f ->f.circuitBreaker
+								 ( c ->c.setName("failoverCB")
+								  .setFallbackUri("forward:/api/v1/db-failover/dragonball/characters")
+								  .setRouteId("dbFailover")
+								 ))
+						.uri("lb://development"))
+				.route(r -> r.path("/api/v1/db-failover/dragonball/*").uri("lb://spring-client-dragonball-failover"))
 				.route(r -> r.path("/api/v1/gameofthrones/*").uri("lb://spring-client-gameofthrones"))
 				
 				.build();
