@@ -1,4 +1,4 @@
-package com.client.controller;
+package com.client.controller2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +21,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 @RestController
-@RequestMapping("/api/v1/gameofthrones/characters")
-public class GameOfThronesController {
+@RequestMapping("/rest/gameofthrones/personajes")
+public class GameOfThronesPersonajesController {
 
 	private Faker faker = new Faker();
 
