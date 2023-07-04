@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+<div th:if="${param.error != null }" th:text="${param.error}"></div>
+
+<br>
+<a th:href="@{/form}">Crear</a>
+<table>
+<thead>
+ <tr>
+    <th>id</th>
+    <th>nombre</th>
+    <th>precio</th>
+    <th>fecha</th>
+    <th>Categoria</th>
+    <th>Acciones</th>
+ </tr>
+
+</thead>
+<tbody>
+  <tr th:each="item : ${productos}">
+       <td th:text="${item.id}"></td>
+        <td><a th:href="@{/ver/}+ ${item.id}">Ver</a></td>
+    
+       <td th:text="${item.nombre}"></td>
+       <td th:text="${item.precio}"></td>
+       <td th:text="${item.createAt}"></td>
+       <td th:text="${item.categoria.nombre}"></td>
+       
+       <td><a th:href="@{/form/}+ ${item.id}">Editar</a></td>
+       
+       <td><a th:href="@{/form-v2/}+ ${item.id}">Editar</a></td>
+       
+    
+        <td><a th:href="@{/eliminar/}+ ${item.id}" onclick="return('Desea eliminar el producto');">Eliminar</a></td>
+    
+     </tr>
+</tbody>
+</table>
+
+
+</body>
+</html>

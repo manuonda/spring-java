@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: spring-dragonball-manu
+        uri: http://localhost:8083
+        predicates:
+        - Path=/api/v1/dragonball/characters
