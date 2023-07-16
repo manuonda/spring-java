@@ -26,7 +26,7 @@ public class Producto {
 	
 	private String nombre;
 
-	private Double precio;
+	private Double precio;	
 	@DateTimeFormat(pattern = "yyy-MM-dd")
 	private Date createAt;
 	
