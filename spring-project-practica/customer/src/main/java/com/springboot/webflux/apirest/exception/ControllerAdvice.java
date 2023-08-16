@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.springboot.webflux.apirest.dto.ErrorDTO;
 
+// Leer mañana sobre esto : https://gustavopeiretti.com/spring-boot-capturar-las-excepciones-retornar-json-estandar/
+
 @RestControllerAdvice
 public class ControllerAdvice {
 
