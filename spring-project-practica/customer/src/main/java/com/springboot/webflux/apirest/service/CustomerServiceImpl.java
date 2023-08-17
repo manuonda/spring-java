@@ -33,19 +33,21 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class CustomerServiceImpl implements ICustomerService {
 	
+	
+	@Autowired
 	private CustomerRepository repository;
 	    
 	private static final Logger log = LoggerFactory.getLogger(CustomerServiceImpl.class);
 	
+	@Autowired
+	private   CustomerMapper customerMapper;
 	
-	private static  CustomerMapper customerMapper;
-	
-	public CustomerServiceImpl(
-			CustomerRepository customerRepository,
-			CustomerMapper customerMapperParam) {
-	   customerMapper = customerMapperParam;
-	   repository = customerRepository;
-	}
+//	public CustomerServiceImpl(
+//			CustomerRepository customerRepository,
+//			CustomerMapper customerMapperParam) {
+//	   customerMapper = customerMapperParam;
+//	   repository = customerRepository;
+//	}
 
 	@Override
 	public Optional<CustomerDTO> save(CustomerDTO dto) {
