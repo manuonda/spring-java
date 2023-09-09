@@ -1,4 +1,0 @@
-FROM java:17
-EXPOSE 8080
-
-ADD

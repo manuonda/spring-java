@@ -4,6 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Service;
 
 import com.springboot.webflux.apirest.dto.CustomerDTO;
 import com.springboot.webflux.apirest.models.Customer;

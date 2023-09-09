@@ -1,0 +1,27 @@
+spring:
+ cloud:
+  gateway:
+   routes:
+    - id : route1
+      uri: http://httpbin.org/uuid  #redirecciona a la url => uri
+      predicates:  
+      - Path=/demo/** #si contiene la peticion de tipo route 
+      - Host=**example.com
+      - Weight = group1,5
+      filters:
+      - SetPath=/uuid
+    - id : route2
+      uri: http://httpbin.org/uuid  #redirecciona a la url => uri
+      predicates:  
+      - Path=/demo/{delay} #si contiene la peticion de tipo route 
+      - Host=**example.com
+      - Weight = group1, 5
+      filters:
+      - SetPath=/drip
+      #http://httpbin.org/drip?duration=2&numbytes=10&code=200&delay=2
+      - AddRequestParameter=duration,2
+      - AddRequestParameter=numbytes,10
+      - AddRequestParameter=code, 200
+      - AddRequestParameter=delay, {delay}
+      - CircuitBreaker :
+          

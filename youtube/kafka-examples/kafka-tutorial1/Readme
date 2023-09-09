@@ -1,0 +1,10 @@
+
+# EXAMPLE KAFA 
+
+## Create Topic 
+ kafka-topics --bootstrap-server broker:9092 --partitions 3 --create --topic "customer.visit" --replication-factor 1
+ 
+## Describe topic
+kafka-topics --bootstrap-server broker:9092 --describe 
+
+## 
