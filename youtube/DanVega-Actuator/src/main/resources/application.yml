@@ -1,0 +1,29 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      group:
+        custom:
+          show-details: always
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+      mode: full
+    java:
+      enable: true
+    os:
+      enable: true
+info:
+  app:
+    name: Actuator Demo
+    description: Event Management Application
+    version: 1.0.0
+    author: Dan Vega
+    docs: http://www.youtube.com

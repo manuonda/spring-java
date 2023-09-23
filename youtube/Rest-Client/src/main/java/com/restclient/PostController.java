@@ -21,8 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/posts")
 public class PostController {
 
-	@Autowired
-	private PostService service;
+	private final PostService service;
+
+    PostController(PostService service) {
+        this.service = service;
+    }
 	
 	@GetMapping("/list")
     List<Post> findAll() {
