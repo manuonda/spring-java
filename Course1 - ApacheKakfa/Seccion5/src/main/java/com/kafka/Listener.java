@@ -33,7 +33,7 @@ public class Listener {
     }*/
 
     @KafkaListener(
-            id = "manuonda", autoStartup ="false",
+            id = "manuonda", autoStartup ="true",
             topics="topicOne", groupId="groupManuonda" ,
             containerFactory = "listenerContainerFactory",
             properties = {

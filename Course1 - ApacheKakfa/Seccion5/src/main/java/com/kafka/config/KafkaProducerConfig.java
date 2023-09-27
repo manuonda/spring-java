@@ -1,20 +1,31 @@
 package com.kafka.config;
 
-import ch.qos.logback.classic.joran.serializedModel.HardenedModelInputStream;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
+import io.micrometer.core.instrument.ImmutableTag;
+import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.MicrometerProducerListener;
 import org.springframework.kafka.core.ProducerFactory;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
 public class KafkaProducerConfig {
+
+   // private final CompositeMeterRegistry compositeMeterRegistry;
+
+    private final PrometheusMeterRegistry prometheusMeterRegistry;
+
+    public KafkaProducerConfig(PrometheusMeterRegistry prometheusMeterRegistry) {
+        this.prometheusMeterRegistry = prometheusMeterRegistry;
+    }
+
 
     public Map<String, Object> producerProps(){
        HashMap<String, Object> props = new HashMap<>();
@@ -27,7 +38,10 @@ public class KafkaProducerConfig {
 
    @Bean
     public ProducerFactory<String, String> producerFactory(){
-       return new DefaultKafkaProducerFactory<String, String>(producerProps());
+        DefaultKafkaProducerFactory<String, String> defaultKafkaProducerFactory = new DefaultKafkaProducerFactory<>(producerProps());
+       defaultKafkaProducerFactory.addListener(new MicrometerProducerListener<String, String>(prometheusMeterRegistry,
+               Collections.singletonList(new ImmutableTag("customTag", "customTagValue"))));
+        return defaultKafkaProducerFactory;
    }
 
 
