@@ -20,4 +20,6 @@ public class RestException {
         return ResponseEntity.status(ex.getStatus())
                 .body(new ErrorDTO(ex.getMessage(),ex.getStatus().value(), new Date()));
     }
+
+
 }

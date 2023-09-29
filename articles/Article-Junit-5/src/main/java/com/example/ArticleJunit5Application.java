@@ -3,13 +3,13 @@ package com.example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
- // terminar 1  : https://www.youtube.com/watch?v=YUqi1IjLX8I
- // terminar 2  : https://www.youtube.com/watch?v=WTAjAo4v9qM&lc=Ugx4ykeyu-83fzl_xDZ4AaABAg.9v5u_ey9JF09v6dsxseOhw
+ // Spring Boot Application With the JWT Authentication
+ // https://www.youtube.com/watch?v=YUqi1IjLX8I
 
 // Exception not valid argument exception : https://www.youtube.com/watch?v=gPnd-hzM_6A
+// OpenApi : https://www.baeldung.com/spring-rest-openapi-documentation
 
-// junit: https://www.javaguides.net/2022/03/spring-boot-unit-testing-service-layer.html
+//  junit: https://www.javaguides.net/2022/03/spring-boot-unit-testing-service-layer.html
  // junit 2:  https://howtodoinjava.com/spring-boot/spring-boot-test-controller-service-dao/
 @SpringBootApplication
 public class ArticleJunit5Application {

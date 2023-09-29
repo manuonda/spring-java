@@ -4,11 +4,9 @@ package com.example.controller;
 import com.example.dto.EmployeeDTO;
 import com.example.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,5 +29,21 @@ public class EmployeeController {
     @GetMapping("/{id}")
     public ResponseEntity<EmployeeDTO> findById(@PathVariable Integer id) {
         return ResponseEntity.ok(this.employeeService.findById(id));
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<EmployeeDTO> create(@RequestBody EmployeeDTO employee ) {
+        EmployeeDTO employeeDTO = this.employeeService.saveEmployee(employee);
+        return ResponseEntity.created(URI.create("/"+ employeeDTO.getId())).body(employeeDTO);
+    }
+
+    @GetMapping("/find-by-email/{email}")
+    public ResponseEntity<EmployeeDTO> findByEmail(@PathVariable String email) {
+        return ResponseEntity.ok(this.employeeService.findByEmail(email));
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<EmployeeDTO> update(@PathVariable("id") Integer id,  @RequestBody EmployeeDTO dto) {
+        return ResponseEntity.ok(this.employeeService.update(id, dto));
     }
 }
