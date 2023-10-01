@@ -34,7 +34,7 @@ public class EmployeeController {
     @PostMapping("/create")
     public ResponseEntity<EmployeeDTO> create(@RequestBody EmployeeDTO employee ) {
         EmployeeDTO employeeDTO = this.employeeService.saveEmployee(employee);
-        return ResponseEntity.created(URI.create("/"+ employeeDTO.getId())).body(employeeDTO);
+        return ResponseEntity.created(URI.create("/"+ employeeDTO.id())).body(employeeDTO);
     }
 
     @GetMapping("/find-by-email/{email}")

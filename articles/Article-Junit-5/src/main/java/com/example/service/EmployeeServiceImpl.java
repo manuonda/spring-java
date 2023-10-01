@@ -27,15 +27,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDTO saveEmployee(EmployeeDTO employeeDTO) {
-        Optional<Employee> foundEmployee = this.employeeRepository.findByEmail(employeeDTO.getEmail());
-        if ( !foundEmployee.isPresent()) {
+        Optional<Employee> foundEmployee = this.employeeRepository.findByEmail(employeeDTO.email());
+        if ( foundEmployee.isPresent()) {
            throw new EmployeeNotFoundException("Not found employe", HttpStatus.NOT_FOUND);
         }
         Employee employee = Employee.builder()
-                .id(employeeDTO.getId())
-                .nombre(employeeDTO.getNombre())
-                .apellido(employeeDTO.getApellido())
-                .email(employeeDTO.getEmail())
+                .id(employeeDTO.id())
+                .nombre(employeeDTO.nombre())
+                .apellido(employeeDTO.apellido())
+                .email(employeeDTO.email())
                 .build();
         Employee employeeSave = employeeRepository.save(employee);
         employeeDTO = EmployeeDTO.builder()

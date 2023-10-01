@@ -15,6 +15,7 @@ spring:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
+#enable actuator metrics
 management:
   endpoint:
     health:
@@ -23,3 +24,7 @@ management:
           show-components: always
           show-details: always
 
+
+
+secret:
+  key: 123o1321290123j12ljh12iou

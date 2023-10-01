@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  // Spring Boot Application With the JWT Authentication
  // https://www.youtube.com/watch?v=YUqi1IjLX8I
 
+// Continuera : Secure Your Fullstack Angular - Spring Boot Application With the JWT Authentication
+
 // Exception not valid argument exception : https://www.youtube.com/watch?v=gPnd-hzM_6A
 // OpenApi : https://www.baeldung.com/spring-rest-openapi-documentation
 
