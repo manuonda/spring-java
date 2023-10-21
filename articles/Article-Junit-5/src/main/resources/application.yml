@@ -14,6 +14,10 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+
 
 #enable actuator metrics
 management:
@@ -28,3 +32,25 @@ management:
 
 secret:
   key: 123o1321290123j12ljh12iou
+
+
+
+#habilitar deshabilitar api-docs swagger-ui
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui-custom.html
+  pathsToMatch: /test/**, support/**, /xzy/**
+
+
+#definir la ruta de swagger-ui
+
+# seleccionar paquetes clases a escanear
+
+  #packagesToScan: com.example
+
+
+#spring.sql.init.mode.always

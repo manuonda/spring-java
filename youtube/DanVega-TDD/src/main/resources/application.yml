@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: service-posts
+  datasource:
+    url: jdbc://postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+
+  #enable actuator metrics
+management:
+  endpoint:
+    health:
+      group:
+        custom:
+          show-components: always
+          show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+   circuitbreakers:
+     enable: true
+
+
+server:
+  port: 8081
+
+

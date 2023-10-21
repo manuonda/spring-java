@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: service-empleado
+  datasource:
+    url: jdbc://postgresql://localhost:5432/database_prueba
+    username: root
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+  #management
+management:
+  health:
+    enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus, beans ,env, loggers, flyway
+

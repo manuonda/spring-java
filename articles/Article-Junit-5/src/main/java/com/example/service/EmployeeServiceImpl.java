@@ -74,13 +74,13 @@ public class EmployeeServiceImpl implements EmployeeService {
              throw new EmployeeNotFoundException("User not found by Email : " + email, HttpStatus.NOT_FOUND);
         }
         Employee employee = optionalEmployee.get();
-        EmployeeDTO employeeDTO = EmployeeDTO.builder()
+       /* EmployeeDTO employeeDTO = EmployeeDTO.builder()
                 .id(employee.getId())
                 .nombre(employee.getNombre())
                 .apellido(employee.getApellido())
                 .email(employee.getEmail())
-                .build();
-        return employeeDTO;
+                .build();*/
+        return this.employeeMapper.toEmployeeDTO(optionalEmployee.get());
     }
 
     @Override

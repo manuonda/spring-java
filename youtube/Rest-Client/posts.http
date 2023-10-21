@@ -1,7 +1,0 @@
-### List Posts
-GET http://localhost:8090/api/posts/list
-
-### Get Posts By Id
-GET http://localhost:8090/api/posts/1
-
-POST http://localhost:8090/api/posts

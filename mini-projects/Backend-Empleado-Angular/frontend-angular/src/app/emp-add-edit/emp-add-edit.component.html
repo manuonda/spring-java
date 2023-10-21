@@ -1,0 +1,53 @@
+<div mat-dialog-title>
+    <h1>Empleado Formulario</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" placeholder="Ingrese Nombre"
+                 formControlName="nombre"
+                >
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Apellido</mat-label>
+                <input matInput type="text" placeholder="Ingrese Nombre"
+                formControlName="apellido"
+                >
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Ingrese Nombre"
+                formControlName="email"
+                >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Cumpleaños</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    
+        <div class="row">
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Option 1</mat-radio-button>
+                <mat-radio-button value="2">Option 2</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    
+    
+    </div>
+    
+
+<div mat-dialog-actions class="action">
+    <button mat-raised-button [mat-dialog-close]="false">Cancelar</button>
+    <button mat-raised-button color="primary">{{data ? "Actualizar":"Guardar"}}</button>
+
+</div>
+</form>

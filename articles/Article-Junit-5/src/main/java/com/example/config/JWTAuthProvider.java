@@ -9,13 +9,14 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.example.domain.User;
 import com.example.dto.UserDTO;
 import com.example.mapper.UserMapper;
-import io.jsonwebtoken.Jwt;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Base64;
 import java.util.Collection;
@@ -25,7 +26,6 @@ import java.util.function.Function;
 
 import static org.springframework.security.config.Elements.JWT;
 
-@RequiredArgsConstructor
 @Component
 public class JWTAuthProvider {
 
@@ -66,10 +66,7 @@ public class JWTAuthProvider {
 
     }
 
-    public<T> T extraClaim(String token, Function<Claim, T> claimResolver){
 
-        return null;
-    }
 
 
 }

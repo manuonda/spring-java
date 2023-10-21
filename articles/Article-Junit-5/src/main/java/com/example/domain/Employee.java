@@ -19,11 +19,20 @@ import lombok.*;
 @Entity(name="employee")
 public class Employee {
 
+    public Employee(){}
+
+    public Employee(Integer id, boolean working, String nombre, String email, String apellido) {
+        this.id = id;
+        this.working = working;
+        this.nombre = nombre;
+        this.email = email;
+        this.apellido = apellido;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @AssertTrue
     private boolean working;
 
     private String nombre;

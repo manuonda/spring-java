@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: danvega-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: post-routes
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/posts/**
+        - id: comments-routes
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/comments/**
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+
+
+server:
+  port: 8083
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      serviceA:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+
