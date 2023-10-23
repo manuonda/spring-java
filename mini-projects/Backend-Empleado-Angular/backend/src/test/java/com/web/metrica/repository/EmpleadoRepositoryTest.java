@@ -80,4 +80,24 @@ class EmpleadoRepositoryTest {
 
     }
 
+    @Test
+    @DisplayName("Test update Empleado")
+    public void shouldUpdateEmpleado_whenSaveEmpleado_returnObjectEmpleado(){
+
+        Empleado empleado1 = Empleado.builder().id(3L).nombre("david").apellido("garcia")
+                .email("manuonda@gmail.com").build();
+        empleadoRepository.save(empleado1);
+
+        //when
+        Empleado findEmpleado = this.empleadoRepository.findById(3L)
+                .stream().findFirst()
+                .orElseThrow(null);
+
+        findEmpleado.setNombre("andres");
+        findEmpleado.setApellido("garcia");
+        this.empleadoRepository.save(findEmpleado);
+        //then
+
+    }
+
 }

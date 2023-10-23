@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: email-service
+  kafka:
+    topic: order_topics
+    consumer:
+      bootstrap-servers: localhost:29092
+      group-id: group2
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*' # Esto permite cualquier clase en la deserialización
+
+
+server:
+  port: 8083
+
+

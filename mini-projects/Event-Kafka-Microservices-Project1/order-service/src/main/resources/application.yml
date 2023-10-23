@@ -1,0 +1,10 @@
+spring:
+ application:
+  name: order-service
+ kafka:
+  bootstrap-servers: localhost:29092
+  topic: order_topics
+
+server:
+ port: 8081
+
