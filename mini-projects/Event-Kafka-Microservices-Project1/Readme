@@ -1,0 +1,8 @@
+Project que permite Crear 3 servicios, los cuales uno es un productor
+y los otros 2 permiten trabajan como consumidores lo cual cada uno tiene un grupo
+a traves del mismo topic.
+Este project no es modular sino servicios independientes.
+
+Order-service : Project productor
+Email-Service: Project consumidor.
+Stock-Service: Project consumidor
