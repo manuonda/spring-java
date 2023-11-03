@@ -1,0 +1,15 @@
+<p *ngIf="title">El nombre es : {{title}}</p>
+
+<ul>
+  <li *ngFor="let city of cities"[ngClass]="['selected','blue']">{{city}}</li>
+</ul>
+
+
+<h2>Condicionales</h2>
+<app-form-new-item (newItemEvent)="addnewCity($event)" [label]="'City'" [className]="'btn-info'"></app-form-new-item>
+<ul *ngFor="let city of cities">
+  <li (click)="onCityClicked(city)" [ngClass]="{'selected':city === selection, 'blue':city !== selection}">{{city}}</li>
+</ul>
+
+<p>{{selection}}</p>
+<app-app-button (click)="onClear()" [color]="'blue'" [label]="'Clear your selection'"></app-app-button>

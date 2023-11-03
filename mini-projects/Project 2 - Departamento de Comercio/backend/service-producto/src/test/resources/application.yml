@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: service-producto
+  datasource:
+    url: jdbc:postgresql://localhost:5432/database_producto
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
