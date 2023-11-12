@@ -1,0 +1,41 @@
+<h1>Contact Form</h1>
+
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div>
+        <label>Name</label>
+        <input type="text" class="form-control" id="name" name="firstname" 
+        [(ngModel)]="model.firstname" #firstname="ngModel" required/>
+        <div class="invalid-feedback" [hidden]="firstname.valid" >This filed is required</div>
+    </div>
+    <div>
+        <label>Are you over 18 years old? </label>
+        <input type="checkbox" class="form-control" id="name" name="checkAdult" 
+        [(ngModel)]="model.checkAdult" #checkAdult="ngModel"
+        required/>
+        <div class="invalid-feedback" [hidden]="checkAdult.valid">This field is required</div>
+    </div>
+    <div>
+        <label>Seleccione</label>
+        <select name="department" [(ngModel)]="model.department"
+        #department="ngModel"
+        required >
+        <option selected>Open this  select menu </option>
+        <option value="marketing">Marketing</option>
+        <option value="sales">Sales</option>
+        <option value="other">Other</option>
+        </select>
+        <div class="invalid-feedback" [hidden]="department.valid">This field is required</div>  
+    </div>
+    <div>
+        <label>Comments</label>
+        <textarea type="text" name="comment" cols="30" rows="30" 
+        [(ngModel)]="model.comment" #comment="ngModel"
+        required></textarea>
+        <div class="invalid-feedback" [hidden]="comment.valid">This field is required</div>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+
+</form>
+
+<pre>{{contactForm}}</pre>

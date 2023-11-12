@@ -1,0 +1,30 @@
+Sistema de Ecommerce -> Event Driven
+
+#En un sistema de comercio electrónico donde se gestionan productos, el inventario es un aspecto crítico. Puedes agregar un servicio adicional llamado InventarioService para gestionar la información del inventario. Aquí hay una expansión del ejemplo anterior para incluir el servicio de inventario:
+
+#Servicio de Gestión de Productos (ProductoService):
+
+#Maneja la información sobre productos.
+Utiliza OpenFeign para comunicarse con el Servicio de Carrito de Compras cuando un producto se agrega o elimina y con el Servicio de Notificaciones para enviar actualizaciones sobre la disponibilidad de productos.
+También utiliza OpenFeign para comunicarse con el InventarioService para verificar la disponibilidad actual del inventario antes de agregar productos al carrito.
+Servicio de Inventario (InventarioService):
+
+#Administra el inventario de productos.
+Puede ser consultado por otros servicios, como el Servicio de Gestión de Productos y el Servicio de Carrito de Compras, para verificar la disponibilidad de productos.
+Servicio de Carrito de Compras (CarritoService):
+
+Administra el carrito de compras de los usuarios.
+Utiliza OpenFeign para comunicarse con el Servicio de Gestión de Productos para verificar la disponibilidad y obtener información detallada sobre los productos.
+Publica eventos en un tema de Kafka cuando se realizan cambios en el carrito (por ejemplo, cuando se agrega o elimina un producto).
+Servicio de Procesamiento de Pagos (PagoService):
+
+Encargado de procesar los pagos.
+Consume eventos del tema de Kafka para conocer las actualizaciones del carrito y realizar el procesamiento de pagos correspondiente.
+Servicio de Notificaciones (NotificacionService):
+
+Gestiona el envío de notificaciones a los usuarios.
+Utiliza OpenFeign para comunicarse con el Servicio de Gestión de Productos y obtener información actualizada sobre los productos.
+Recibe eventos de Kafka para ser notificado cuando hay cambios relevantes en los productos.
+En este escenario, el InventarioService se encarga de gestionar y proporcionar información sobre el inventario. Cuando el ProductoService agrega un producto al carrito, puede comunicarse con el InventarioService a través de OpenFeign para verificar la disponibilidad del producto en el inventario antes de confirmar la operación.
+
+Esta arquitectura distribuida permite una gestión más efectiva del inventario y asegura que los diferentes servicios estén coordinados al realizar cambios en el carrito o en el inventario, facilitando así un manejo más eficiente de las operaciones en un entorno de microservicios.

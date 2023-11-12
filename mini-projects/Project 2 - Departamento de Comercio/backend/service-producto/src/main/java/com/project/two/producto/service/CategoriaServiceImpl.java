@@ -2,10 +2,14 @@ package com.project.two.producto.service;
 
 import com.project.two.producto.domain.Categoria;
 import com.project.two.producto.dto.CategoriaDTO;
+import com.project.two.producto.dto.ProductoDTO;
 import com.project.two.producto.exception.EntityExists;
 import com.project.two.producto.exception.EntityNotFound;
 import com.project.two.producto.mapper.CategoriaMapper;
 import com.project.two.producto.repository.CategoriaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +22,9 @@ public class CategoriaServiceImpl implements CategoriaService {
     private final CategoriaMapper categoriaMapper;
 
     private final CategoriaRepository categoriaRepository;
+
+    @Autowired
+    RedisTemplate<Long, Categoria> redisTemplate;
 
     public CategoriaServiceImpl(CategoriaMapper categoriaMapper, CategoriaRepository categoriaRepository) {
         this.categoriaMapper = categoriaMapper;
@@ -34,6 +41,9 @@ public class CategoriaServiceImpl implements CategoriaService {
 
         Categoria categoria = this.categoriaMapper.toEntityCategoria(dto);
         categoria = this.categoriaRepository.save(categoria);
+
+        // save categoria
+        //this.redisTemplate.opsForValue().set(categoria.getId(),categoria);
         return this.categoriaMapper.toDTOCategoria(categoria);
     }
 
@@ -74,6 +84,12 @@ public class CategoriaServiceImpl implements CategoriaService {
 
     @Override
     public List<CategoriaDTO> findAll() {
+        try {
+            Thread.sleep(5000);
+            
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return this.categoriaMapper.toListCategoriaDTO(this.categoriaRepository.findAll());
     }
 }

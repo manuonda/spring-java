@@ -1,30 +1,14 @@
-import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'frontend';
-  cities:Array<string>;
-  selection: string;
-  
-  constructor(){
-    this.cities = ['Lima','citi2','Lima','Barcelona'];
-    this.selection = "";
-  }
-
-  onCityClicked(city:string) {
-     console.log("onCityClicked", city);
-     this.selection = city;
-  }
-
- 
-  onClear():void {
-    this.selection ="";
-  }
-  addnewCity(city:string) {
-    this.cities.push(city);
-  }
 }

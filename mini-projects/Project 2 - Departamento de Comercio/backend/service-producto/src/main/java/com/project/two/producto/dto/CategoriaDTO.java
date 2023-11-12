@@ -12,7 +12,8 @@ public class CategoriaDTO {
 
     private Long id;
 
-    @NotNull
+    @NotNull(message = "El nombre de categoria no puede estar vacio")
     private String name;
+
     private String description;
 }

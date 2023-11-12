@@ -1,0 +1,7 @@
+<ul>
+  <li 
+   (click)="onCityClicked(city)" 
+  [ngClass]="{'selected':city === selection, 'blue':city !== selection}">
+  {{city | titlecase}}</li>
+</ul>
+

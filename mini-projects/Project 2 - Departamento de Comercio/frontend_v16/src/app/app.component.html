@@ -1,0 +1,22 @@
+
+<h2>Cities</h2>
+
+<app-form-new-item (newItemEvent)="addnewCity($event)" [label]="'City'" [className]="'btn-info'"></app-form-new-item>
+<input type="te xt" placeholder="Filter" [(ngModel)]="criteria" />
+
+<app-cities 
+   *ngFor="let city of (cities | filter:criteria)"
+   (cityClickedEvent)="onCityClicked($event)" 
+   [city]="city"
+   [selection]="selection"
+   ></app-cities>
+
+<hr/>
+<p>City selected <strong>{{selection}}</strong></p>
+
+
+<app-app-button (click)="onClear()" [color]="'blue'" [label]="'Clear your selection'"></app-app-button>
+
+
+<hr>
+<app-contact></app-contact>

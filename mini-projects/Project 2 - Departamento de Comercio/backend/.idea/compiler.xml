@@ -7,13 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="servicio-inventario" />
+        <module name="service-commons" />
         <module name="service-producto" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="service-commons" options="-parameters" />
       <module name="service-producto" options="-parameters" />
+      <module name="servicio-inventario" options="-parameters" />
     </option>
   </component>
 </project>

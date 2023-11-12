@@ -9,4 +9,8 @@ public interface ProductoService  extends GenericCrudInterface<ProductoDTO, Long
 
 
     List<ProductoDTO> findAll();
+
+    boolean realizarReposicionProducto(Long idProducto, int cantidadAgregar);
+
+
 }

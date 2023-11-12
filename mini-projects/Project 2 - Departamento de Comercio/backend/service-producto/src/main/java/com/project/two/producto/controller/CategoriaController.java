@@ -1,9 +1,11 @@
 package com.project.two.producto.controller;
 
 
+import com.project.two.producto.config.RedisConfig;
 import com.project.two.producto.dto.CategoriaDTO;
 import com.project.two.producto.service.CategoriaService;
 import jakarta.validation.Valid;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +23,8 @@ public class CategoriaController {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/list")
+    //@Cacheable(value = RedisConfig.CACHE_NAME)
     public ResponseEntity<List<CategoriaDTO>> listAll(){
         List<CategoriaDTO> list = this.categoriaService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(list);

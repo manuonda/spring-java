@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: service-inventario
+  datasource:
+    url: jdbc:postgresql://localhost:5432/database_producto
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  flyway:
+    baseline-on-migrate: true
+
+
+  #configuration kafka
+  kafka:
+    topic:
+      reposicion_producto: reposicion_producto
+      venta_producto: venta_producto
+      agregar_producto: agregar_producto
+    consumer:
+      bootstrap-servers: localhost:29092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*' # Esto permite cualquier clase en la deserialización
+
+server:
+  port: 8084
