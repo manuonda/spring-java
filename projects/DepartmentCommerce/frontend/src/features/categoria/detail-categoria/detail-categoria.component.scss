@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* Estilos adicionales según sea necesario */
+mat-card {
+    width: 500px; /* Ajusta según el ancho deseado para tu tarjeta */
+  }
+
+  .button-row{
+    display: table-cell;
+  max-width: 600px;
+  }
+.mat-card-content {
+    max-width: 500px;
+}
+mat-form-field {
+    width: 100%;
+}

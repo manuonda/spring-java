@@ -1,0 +1,36 @@
+
+<div class="container">
+    <mat-card class="mat-card-content">
+        <mat-card-header>
+            <section class="">
+                <h2>Categoria</h2>
+              </section>
+  
+        </mat-card-header>
+        <mat-card-content>
+            
+            <form [formGroup]="formGroup" (ngSubmit)="saveData()">
+               <p>
+                <mat-form-field>
+                    <mat-label>Name(*)</mat-label>
+                    <input matInput formControlName="name" />
+                </mat-form-field>
+                
+               </p>
+               <p>
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description" />
+                </mat-form-field>
+               </p> 
+                <div class="button-row">
+                    <a mat-raised-button href="/categorias" color="secondary" >Volver</a>
+                    <button type="submit" mat-raised-button color="primary">Guardar</button>      
+                </div>         
+                
+            </form>
+        </mat-card-content>
+       
+    </mat-card>
+    
+</div>
