@@ -18,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card'; 
-import { ICategoriaDataForm } from '../models/categoria.model';
+import { ICategoria, ICategoriaDataForm } from '../models/categoria.model';
 import { CategoriaService } from '../services/categoria.service';
 
 @Component({
@@ -43,7 +43,7 @@ export class DetailCategoriaComponent {
 
   formGroup = this._formBuilder.group<ICategoriaDataForm>({
      name:  this._formBuilder.control('', { validators: [Validators.required] }),
-     description: this._formBuilder.control('',{validators :[Validators.required]}) 
+     description: this._formBuilder.control('') 
   });
 
 
@@ -52,7 +52,19 @@ export class DetailCategoriaComponent {
     console.log("this.saveData : ", this.formGroup.value);
     console.log(this.formGroup.valid);
     if (this.formGroup.valid) {
-       if ( )      
+
+       const categoriaData: ICategoria = {
+        name : this.formGroup.get('name')?.value?? '',
+        description: this.formGroup.get('description')?.value ?? ''
+       };
+       this.categoriaService.createCategoria(categoriaData)
+       .subscribe((data) =>  {
+          console.log("data : ",data);
+       }, error => {
+          console.error("error :",error);  
+       });
+    
+
     } 
   }
 }

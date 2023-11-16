@@ -1,7 +1,7 @@
 import { FormControl } from "@angular/forms";
 
 export interface ICategoria {
-    id:number;
+    id?:number;
     name:string;
     description?:string;
 }
@@ -9,5 +9,5 @@ export interface ICategoria {
 
 export interface ICategoriaDataForm {
 	name: FormControl<string>;
-	description: FormControl<string | null>;
+	description: FormControl<string>;
 }

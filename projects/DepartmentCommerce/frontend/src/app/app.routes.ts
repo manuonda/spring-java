@@ -5,6 +5,5 @@ import { ListCategoriaComponent } from '../features/categoria/list-categoria/lis
 
 export const routes: Routes = [
     { path:'categorias', component: ListCategoriaComponent},
-    { path: 'categoria', component: DetailCategoriaComponent},
-    { path: 'categoria/{id}', component: DetailCategoriaComponent}
+    { path: 'categoria', component: DetailCategoriaComponent}
 ];
