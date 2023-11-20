@@ -1,10 +1,12 @@
 package com.project.two.producto.service;
 
 import com.project.two.producto.TestContainerConfiguration;
-import com.project.two.producto.domain.Categoria;
-import com.project.two.producto.dto.CategoriaDTO;
-import com.project.two.producto.mapper.CategoriaMapperImpl;
+import com.project.two.producto.business.mapper.CategoriaMapper;
+import com.project.two.producto.business.mapper.CategoriaMapperImpl;
+import com.project.two.producto.domain.entity.Categoria;
+import com.project.two.producto.domain.dto.CategoriaDTO;
 import com.project.two.producto.repository.CategoriaRepository;
+import com.project.two.producto.business.service.impl.CategoriaServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

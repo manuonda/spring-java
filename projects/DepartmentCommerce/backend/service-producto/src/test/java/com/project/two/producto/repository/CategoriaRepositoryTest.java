@@ -1,7 +1,7 @@
 package com.project.two.producto.repository;
 
 
-import com.project.two.producto.domain.Categoria;
+import com.project.two.producto.domain.entity.Categoria;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -37,8 +37,12 @@ public class CategoriaRepositoryTest {
     @DisplayName("Save Categoria")
     void shouldSaveCategoria_returnObjectCategoria(){
         //given
+        Categoria categoria1 = Categoria.builder()
+                .id(1L)
+                .name("Categoria numero 1")
+                .build();
         //when
-        Categoria categoriaSave = this.categoriaRepository.save(categoria);
+        Categoria categoriaSave = this.categoriaRepository.save(categoria1);
 
         //then
         Assertions.assertThat(categoriaSave).isNotNull();
@@ -73,12 +77,12 @@ public class CategoriaRepositoryTest {
         Optional<Categoria> optional = this.categoriaRepository.findById(categoriaSave.getId());
 
         //then
-        Assertions.assertThat(optional.get()).isNotNull();
+        //Assertions.assertThat(optional.get()).isNotNull();
         assertThrows(NoSuchElementException.class, ()-> {
             optional.get();
         });
-
-
     }
+
+
 
 }

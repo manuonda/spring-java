@@ -1,3 +1,6 @@
+server:
+  port: 8084
+
 spring:
   application:
     name: service-inventario
@@ -13,6 +16,7 @@ spring:
     baseline-on-migrate: true
 
 
+
   #configuration kafka
   kafka:
     topic:
@@ -26,5 +30,10 @@ spring:
       properties:
         spring.json.trusted.packages: '*' # Esto permite cualquier clase en la deserialización
 
-server:
-  port: 8084
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    server-url:
+      defaultZone: http://localhst:8761/eureka

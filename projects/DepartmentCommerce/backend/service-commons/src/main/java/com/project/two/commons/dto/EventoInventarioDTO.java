@@ -2,7 +2,7 @@ package com.project.two.commons.dto;
 
 
 /**
- * Evento relazionado a Inventario
+ * Evento relacionado a Inventario
  * @param event
  * @param idProducto
  * @param cantidad

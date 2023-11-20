@@ -44,3 +44,12 @@ management:
     web:
       exposure:
         include: '*' # Para exponer todos los endpoints de Actuator, puedes personalizar esta lista según tus necesidades
+
+
+#configuration eureka server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

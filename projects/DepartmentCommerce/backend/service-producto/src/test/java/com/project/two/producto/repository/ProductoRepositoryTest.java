@@ -1,8 +1,8 @@
 package com.project.two.producto.repository;
 
 
-import com.project.two.producto.domain.Categoria;
-import com.project.two.producto.domain.Producto;
+import com.project.two.producto.domain.entity.Categoria;
+import com.project.two.producto.domain.entity.Producto;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

@@ -3,6 +3,10 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/backend/service-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backend/service-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend/service-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend/service-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend/service-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/backend/service-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backend/service-producto/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backend/service-producto/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backend/servicio-inventario/src/main/java" charset="UTF-8" />

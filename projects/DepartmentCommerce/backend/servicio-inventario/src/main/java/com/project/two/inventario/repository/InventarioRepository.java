@@ -1,7 +1,7 @@
 package com.project.two.inventario.repository;
 
-import com.project.two.inventario.domain.Inventario;
-import com.project.two.inventario.domain.Producto;
+import com.project.two.inventario.domain.entity.Inventario;
+import com.project.two.inventario.domain.entity.Producto;
 import jakarta.transaction.Transactional;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -25,9 +25,9 @@ public interface InventarioRepository extends JpaRepository<Inventario, Long> {
     // Actualizar inventario para reposicion de stock
     @Modifying  // indica que la consulta modificar el estado de la base de datos
     @Transactional // asegura que la operación sea atomica
-    @Query("update Inventario i  set i.qty = i.qty + : cantidadAgregar WHERE i.producto.id = :idProducto")
+    @Query("update tbl_inventario i  set i.qty = i.qty + :cantidadAgregar WHERE i.producto.id = :idProducto")
     void reposicionarInventario(@Param("idProducto") Long idProducto,
-                                @Param("cantidaAgregar") int cantidadAgregar);
+                                @Param("cantidadAgregar") int cantidadAgregar);
 
 
    // Actualizar inventario para venta de productos
@@ -37,6 +37,6 @@ public interface InventarioRepository extends JpaRepository<Inventario, Long> {
     void venderProducto(@Param("idProducto") Long idProducto,@Param("cantVendida") int cantVendida);
 
 
-   @Query("SELECT i FROM tbl_inventario i  WHERE i.id_producto=:idProducto")
+   @Query("SELECT i FROM tbl_inventario i  WHERE i.producto.id=:idProducto")
     public Optional<Inventario> findByProductoId(@Param("idProducto") Long idProducto);
 }

@@ -1,9 +1,7 @@
 package com.project.two.producto.config;
 
 
-import com.project.two.producto.domain.Categoria;
-import com.project.two.producto.dto.ProductoDTO;
-import org.springframework.cache.CacheManager;
+import com.project.two.producto.domain.entity.Categoria;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -2,13 +2,15 @@ package com.project.two.producto.service;
 
 
 import com.project.two.producto.TestContainerConfiguration;
-import com.project.two.producto.domain.Categoria;
-import com.project.two.producto.domain.Producto;
-import com.project.two.producto.dto.CategoriaDTO;
-import com.project.two.producto.dto.ProductoDTO;
-import com.project.two.producto.mapper.ProductoMapperImpl;
+import com.project.two.producto.business.mapper.ProductoMapperImpl;
+import com.project.two.producto.domain.entity.Categoria;
+import com.project.two.producto.domain.entity.Producto;
+import com.project.two.producto.domain.dto.CategoriaDTO;
+import com.project.two.producto.domain.dto.ProductoDTO;
 import com.project.two.producto.repository.CategoriaRepository;
 import com.project.two.producto.repository.ProductoRepository;
+import com.project.two.producto.business.service.impl.CategoriaServiceImpl;
+import com.project.two.producto.business.service.impl.ProductoServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

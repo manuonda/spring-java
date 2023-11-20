@@ -5,11 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../mini-projects/Event-Kafka-Microservices-Project1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../mini-projects/Event-Kafka-Microservices-Project1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy-datasource.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/CategoriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/dto/request/CategoriaRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/dto/request/ProductoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/IBaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/TestConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/mapper/ProductoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-inventario/src/test/java/com/project/two/inventario/repository/InventarioRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/features/categoria/detail-categoria/detail-categoria.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/features/categoria/detail-categoria/detail-categoria.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/features/categoria/models/categoria.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/features/categoria/models/categoria.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/EventoInventarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/EventoInventarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/ServiceProductoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/ServiceProductoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/config/AppException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/advice/AppException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/controller/CategoriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/CategoriaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/controller/IBaseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/ProductoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/entity/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/dto/CategoriaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/dto/CategoriaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/dto/ProductoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/dto/ProductoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/dto/ResponseExceptionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/dto/ValidationErrorResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/dto/ValidationErrorResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/exception/EntityExists.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/common/exception/EntityExists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/exception/EntityNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/common/exception/EntityNotFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/mapper/CategoriaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/mapper/CategoriaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/mapper/ProductoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/mapper/ProductoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/repository/CategoriaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/repository/CategoriaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/repository/ProductoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/repository/ProductoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/service/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/service/CategoriaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/CategoriaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/service/GenericCrudInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/GenericCrudInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/service/ProductoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/ProductoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/service/ProductoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/ServiceProductoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/ServiceProductoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/TestContainerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/TestContainerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/repository/CategoriaRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/repository/CategoriaRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/repository/ProductoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/repository/ProductoRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/service/CategoriaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/service/CategoriaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/service/ProductoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/service/ProductoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/ServicioInventarioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/ServicioInventarioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/controller/InventarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/presentation/controller/InventarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/domain/entity/Categoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/entity/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/dto/InventarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/domain/dto/InventarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/exception/EntityExist.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/common/exception/EntityExist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/exception/EntityNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/common/exception/EntityNotFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/mapper/InventarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/mapper/InventarioMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/repository/InventarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/repository/InventarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/service/InventarioListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/service/InventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/service/InventarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/service/ProductoFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/ProductoFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +90,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/6.0.13/spring-test-6.0.13-sources.jar!/org/springframework/test/web/servlet/MockMvc.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -47,16 +114,41 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/manuonda/projects/projects-capacitacion/java-project-movie&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/manuonda/projects/spring-project-courses/projects/DepartmentCommerce/backend/servicio-inventario/src/main/java/com/project/two/inventario/common&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.project.two.inventario.domain.entity" />
+      <recent name="com.project.two.producto.domain.entity" />
+      <recent name="com.project.two.producto.service.impl" />
+      <recent name="com.project.two.producto.presentation.advice" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.two.inventario.business.mapper" />
       <recent name="com.project.two.commons.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServiceProductoApplication">
+  <component name="RunManager" selected="Maven.servicio-inventario [install]">
+    <configuration name="ServiceEurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.eureka.ServiceEurekaApplication" />
+      <module name="service-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.two.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceProductoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.two.producto.ServiceProductoApplication" />
       <module name="service-producto" />
@@ -70,7 +162,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioInventarioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicioInventarioApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.two.inventario.ServicioInventarioApplication" />
       <module name="servicio-inventario" />
       <extension name="coverage">
@@ -98,27 +190,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductoRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-producto" />
+    <configuration name="InventarioRepositoryTest.shouldSaveInventario_whenSave_returnObjectInventario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="servicio-inventario" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.two.producto.repository.*" />
+          <option name="PATTERN" value="com.project.two.inventario.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.producto.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.producto.repository.ProductoRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.project.two.inventario.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.project.two.inventario.repository.InventarioRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldSaveInventario_whenSave_returnObjectInventario" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="servicio-inventario [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/servicio-inventario" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.servicio-inventario [install]" />
         <item itemvalue="Application.ServiceProductoApplication" />
-        <item itemvalue="Application.ServicioInventarioApplication" />
+        <item itemvalue="Application.ServiceEurekaApplication" />
+        <item itemvalue="JUnit.InventarioRepositoryTest.shouldSaveInventario_whenSave_returnObjectInventario" />
         <item itemvalue="JUnit.CategoriaRepositoryTest" />
-        <item itemvalue="JUnit.ProductoRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -143,5 +262,148 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/controller/CategoriaControllerTest.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/CategoriaController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/CategoriaController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/CategoriaServiceImpl.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/CategoriaServiceImpl.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/CategoriaServiceImpl.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/ProductoController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/ProductoController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/presentation/controller/ProductoController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-gateway/src/main/java/com/project/two/gateway/ServiceGatewayApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/ServicioInventarioApplication.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioListener.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioListener.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioListener.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioListener.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-inventario/src/main/java/com/project/two/inventario/business/service/InventarioServiceImpl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/backend$All_in_service_producto.ic" NAME="All in service-producto Coverage Results" MODIFIED="1700328675589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

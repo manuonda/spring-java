@@ -24,8 +24,9 @@ public class TestContainerConfiguration {
 		return new GenericContainer<>(DockerImageName.parse("redis:latest")).withExposedPorts(6379);
 	}
 
+	/*
 	public static void main(String[] args) {
 		SpringApplication.from(ServiceProductoApplication::main).with(TestContainerConfiguration.class).run(args);
 	}
-
+	 */
 }

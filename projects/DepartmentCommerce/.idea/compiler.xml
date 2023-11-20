@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,12 +10,16 @@
         <module name="servicio-inventario" />
         <module name="service-commons" />
         <module name="service-producto" />
+        <module name="service-gateway" />
+        <module name="service-eureka" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="service-commons" options="-parameters" />
+      <module name="service-eureka" options="-parameters" />
+      <module name="service-gateway" options="-parameters" />
       <module name="service-producto" options="-parameters" />
       <module name="servicio-inventario" options="-parameters" />
     </option>
