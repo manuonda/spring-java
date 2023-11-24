@@ -1,4 +1,4 @@
-package com.project.two.email.config.kafka;
+package com.project.two.email.config;
 
 
 import org.springframework.context.annotation.Bean;

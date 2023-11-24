@@ -2,10 +2,11 @@ package com.project.two.email.presentation.controller;
 
 
 import com.project.two.email.business.service.EmailLogoService;
-import jakarta.ws.rs.PathParam;
+import com.project.two.email.entity.request.RequestEmailDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,12 +24,10 @@ public class SendEmailController {
 
     @GetMapping("/email")
     public void sendEmail(
-            @PathParam("toAddress") String toAddress,
-            @PathParam("subject") String subject,
-            @PathParam("body") String body
-      ){
-       logger.info("Send Email : " + toAddress + " subject : "+ subject+ " body : " + body);
-       this.emailLogService.
+            @RequestBody RequestEmailDTO request
+            ){
+        logger.info("RequestNotification DTO : ", request.toString());
+
     }
 }
 

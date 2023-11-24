@@ -1,10 +1,10 @@
 package com.project.two.email.business.service;
 
-import com.project.two.email.entity.dto.EmailLogDTO;
+import com.project.two.email.entity.dto.EmailLoggerDTO;
 
 public interface EmailLogoService {
 
-    EmailLogDTO saveEmailLogo(EmailLogDTO emailLogDTO);
+    EmailLoggerDTO saveEmailLogo(EmailLoggerDTO emailLogDTO);
 
     void sendEmail(String toAddress, String subject, String body );
 }

@@ -3,7 +3,7 @@ package com.project.two.email.business.service.impl;
 
 import com.project.two.commons.dto.EmailEventDTO;
 import com.project.two.email.business.service.EmailLogoService;
-import com.project.two.email.entity.dto.EmailLogDTO;
+import com.project.two.email.entity.dto.EmailLoggerDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -27,12 +27,12 @@ public class EmailListener {
      public void emailListener(EmailEventDTO emailEventDTO) {
 
         // save logo
-        EmailLogDTO emailLogDTO = new EmailLogDTO(
+        EmailLoggerDTO emailLogDTO = new EmailLoggerDTO(
                 emailEventDTO.to(),
                 emailEventDTO.subject(),
                 emailEventDTO.body()
         );
-        this.emailLogService.saveEmailLog(emailLogDTO);
+        this.emailLogService.saveEmailLogo(emailLogDTO);
 
         //send email
      }

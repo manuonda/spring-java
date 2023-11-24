@@ -1,21 +1,21 @@
 package com.project.two.email.business.service.impl;
 
-import com.project.two.email.business.mapper.EmailLogMapper;
+import com.project.two.email.business.mapper.EmailLoggerMapper;
 import com.project.two.email.business.service.EmailLogoService;
-import com.project.two.email.entity.domain.EmailLogo;
-import com.project.two.email.entity.dto.EmailLogDTO;
-import com.project.two.email.repository.EmailLogoRepository;
+import com.project.two.email.entity.domain.EmailLogger;
+import com.project.two.email.entity.dto.EmailLoggerDTO;
+import com.project.two.email.repository.EmailLoggerRepository;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class EmailLogoServiceImpl implements EmailLogoService {
 
-    private final EmailLogoRepository emailLogoRepository;
+    private final EmailLoggerRepository emailLogoRepository;
 
-    private final EmailLogMapper emailLogMapper;
+    private final EmailLoggerMapper emailLogMapper;
 
-    public EmailLogoServiceImpl(EmailLogoRepository emailLogoRepository, EmailLogMapper emailLogMapper) {
+    public EmailLogoServiceImpl(EmailLoggerRepository emailLogoRepository, EmailLoggerMapper emailLogMapper) {
         this.emailLogoRepository = emailLogoRepository;
         this.emailLogMapper = emailLogMapper;
     }
@@ -23,9 +23,9 @@ public class EmailLogoServiceImpl implements EmailLogoService {
 
 
     @Override
-    public EmailLogDTO saveEmailLogo(EmailLogDTO emailLogDTO) {
-        EmailLogo emailLogo = this.emailLogMapper.toEntity(emailLogDTO);
-        EmailLogo saveEmailLogo = this.emailLogoRepository.save(emailLogo);
+    public EmailLoggerDTO saveEmailLogo(EmailLoggerDTO emailLogDTO) {
+        EmailLogger emailLogo = this.emailLogMapper.toEntity(emailLogDTO);
+        EmailLogger saveEmailLogo = this.emailLogoRepository.save(emailLogo);
         return this.emailLogMapper.toDTO(saveEmailLogo);
     }
 

@@ -14,8 +14,21 @@ spring:
       properties:
         spring.json.trusted.packages: '*' # Esto permite cualquier clase en la deserializaci�n
   mail:
-    host:
-      port:
+    host: email-smtp.us-east-1.amazonaws.com
+    port: 587
+    username: AKIASE4MOIVA44RF3LGY
+    password: BMVbxrmdeA1rS1cF0M3D8Rkp/25PiM+zCMpNvkkmNA1m
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          port: 587
+          auth: true
+          starttls:
+            enable : true
+            required: true
+
 
 
 
