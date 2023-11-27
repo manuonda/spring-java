@@ -17,7 +17,7 @@ import java.util.Map;
 public class EmailKafkaConsumer {
 
 
-    @Value("${spring.kafka.boostrap}")
+    @Value("${spring.kafka.consumer.bootstrap-servers}")
     private String bootStrap;
 
     public Map<String, Object> props (){
