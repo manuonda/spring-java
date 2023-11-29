@@ -2,7 +2,7 @@ package com.project.two.email.presentation.controller;
 
 
 import com.project.two.email.business.service.EmailService;
-import com.project.two.email.entity.request.RequestEmailDTO;
+import com.project.two.commons.dto.RequestEmailDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;

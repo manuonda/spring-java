@@ -1,10 +1,8 @@
 package com.project.two.email.business.service.impl;
 
 import com.project.two.email.business.service.EmailService;
-import com.project.two.email.entity.request.RequestEmailDTO;
+import com.project.two.commons.dto.RequestEmailDTO;
 import jakarta.mail.internet.MimeMessage;
-import lombok.RequiredArgsConstructor;
-import org.mapstruct.ap.shaded.freemarker.template.Template;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 import java.util.Objects;
 
 @Service

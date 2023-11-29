@@ -24,7 +24,7 @@ spring:
       reposicion_producto: reposicion_producto
       venta_producto: venta_producto
       agregar_producto: agregar_producto
-
+      envio_email: envio_email
 
 #server port spring boot
 server:

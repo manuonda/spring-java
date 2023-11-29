@@ -9,7 +9,8 @@ spring:
     name: service-email
   kafka:
     topic:
-      envio_email_producto: envio_email_producto
+      envio_email: envio_email
+    group: grupo_email
     consumer:
       bootstrap-servers: localhost:29092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
@@ -47,12 +48,12 @@ spring:
 
 
 # === configuration eureka discover client
-#eureka:
-#  instance:
-#    hostname: localhost
-#  client:
-#    service-url:
-#       defaultZone: http://localhost:8761/eureka
+eureka:
+  instance:
+   hostname: localhost
+  client:
+    service-url:
+       defaultZone: http://localhost:8761/eureka
 
 # ====  actuator
 management:
@@ -64,7 +65,7 @@ management:
       exposure:
         include: '*' # para exponer todos los endpoints de Actuator
 
-
+#configuration aws email
 cloud:
   aws:
     region:

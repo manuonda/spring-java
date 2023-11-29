@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-email/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-email/src/main/resources/templates/email-template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-email/src/test/java/com/project/two/email/service/EmailServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/listener/EmailListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-email/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/ServiceEmailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/ServiceEmailApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/config/EmailConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/config/kafka/EmailKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/config/kafka/EmailKafkaConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/entity/request/RequestEmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/entity/request/RequestEmailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/entity/request/RequestEmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/RequestEmailDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/presentation/controller/SendEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/presentation/controller/SendEmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-email/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/test/java/com/project/two/inventario/ServicioInventarioApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/test/java/com/project/two/inventario/ServicioInventarioApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/manuonda/projects/spring-project-courses/projects/DepartmentCommerce/backend/service-email/pom.xml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/manuonda/projects/spring-project-courses/projects/DepartmentCommerce/backend/servicio-usuarios&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -85,7 +86,7 @@
       <recent name="com.project.two.commons.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServiceEmailApplication">
+  <component name="RunManager" selected="Application.ServiceProductoApplication">
     <configuration name="ServiceEmailApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="EMAIL_HOST" value="email-smtp.us-east-1.amazonaws.com" />
@@ -104,6 +105,32 @@
         <option name="credential" />
         <option name="region" />
         <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceEurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.eureka.ServiceEurekaApplication" />
+      <module name="service-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.two.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceProductoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.producto.ServiceProductoApplication" />
+      <module name="service-producto" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.two.producto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,38 +164,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailServiceTest.testSendMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-email" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.two.email.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.email.service" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.email.service.EmailServiceTest" />
-      <option name="METHOD_NAME" value="testSendMail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicioInventarioApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="servicio-inventario" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.two.inventario.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.inventario" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.inventario.ServicioInventarioApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="service-email [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -196,19 +191,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ServicioInventarioApplication" />
+      <item itemvalue="Application.ServiceEurekaApplication" />
+      <item itemvalue="Application.ServiceProductoApplication" />
       <item itemvalue="Application.ServiceEmailApplication" />
       <item itemvalue="JUnit.EmailServiceTest" />
-      <item itemvalue="JUnit.EmailServiceTest.testSendMail" />
-      <item itemvalue="JUnit.ServicioInventarioApplicationTests.contextLoads" />
       <item itemvalue="Maven.service-email [clean]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServiceProductoApplication" />
+        <item itemvalue="Application.ServiceEurekaApplication" />
         <item itemvalue="Application.ServiceEmailApplication" />
         <item itemvalue="Maven.service-email [clean]" />
         <item itemvalue="JUnit.EmailServiceTest" />
-        <item itemvalue="JUnit.ServicioInventarioApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.EmailServiceTest.testSendMail" />
       </list>
     </recent_temporary>
   </component>
@@ -317,22 +312,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
-          <line>63</line>
+          <line>68</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
-          <line>67</line>
+          <line>72</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
-          <line>70</line>
+          <line>75</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java</url>
-          <line>71</line>
+          <line>76</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -372,28 +367,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java</url>
-          <line>47</line>
+          <line>43</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java</url>
-          <line>51</line>
+          <line>47</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java</url>
-          <line>62</line>
+          <line>58</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java</url>
-          <line>63</line>
+          <line>59</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java</url>
-          <line>70</line>
+          <line>66</line>
           <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

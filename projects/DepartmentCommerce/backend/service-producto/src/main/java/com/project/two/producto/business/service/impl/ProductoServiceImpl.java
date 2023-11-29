@@ -2,6 +2,7 @@ package com.project.two.producto.business.service.impl;
 
 import com.project.two.commons.constants.CommonConstants;
 import com.project.two.commons.dto.EventoInventarioDTO;
+import com.project.two.commons.dto.RequestEmailDTO;
 import com.project.two.producto.domain.entity.Categoria;
 import com.project.two.producto.domain.entity.Producto;
 import com.project.two.producto.domain.dto.ProductoDTO;
@@ -40,6 +41,10 @@ public class ProductoServiceImpl implements ProductoService {
     @Value("${spring.kafka.topic.agregar_producto}")
     private String kafkaTopicAgregarProducto;
 
+    @Value("${spring.kafka.topic.envio_email}")
+    private String kafkaTopicSendEmail;
+
+
 
     private static final org.slf4j.Logger Logger = LoggerFactory.getLogger(ProductoServiceImpl.class);
 
@@ -76,7 +81,17 @@ public class ProductoServiceImpl implements ProductoService {
         );
 
 
+
+        // send topic inventario
         kafkaTemplate.send(kafkaTopicAgregarProducto,eventoInventarioDTO);
+        // send topic email
+        RequestEmailDTO requestEmailDTO = new RequestEmailDTO(
+                "manuonda",
+                "Creacion de Nuevo Producto  : " + producto.getName() ,
+                "",
+                null
+                );
+        kafkaTemplate.send(kafkaTopicSendEmail, requestEmailDTO);
 
         return  this.productoMapper.toProductoDTO(producto);
     }
