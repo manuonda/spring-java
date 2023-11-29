@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/listener/EmailListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/business/service/impl/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/entity/request/RequestEmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/RequestEmailDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/presentation/controller/SendEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/java/com/project/two/email/presentation/controller/SendEmailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/java/com/project/two/producto/business/service/impl/ProductoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
