@@ -21,7 +21,7 @@ public class EmailListener {
    @KafkaListener(id = "listener_email",
             groupId = "${spring.kafka.group}" ,
             topics = {"${spring.kafka.topic.envio_email}"})
-   public void envioEmail(Object object) {
+   public void envioEmail(RequestEmailDTO object) {
       logger.info("envio email ");
       RequestEmailDTO  requestEmailDTO  = (RequestEmailDTO) object;
       this.emailService.sendMessageWithAttachmentsTemplate(requestEmailDTO, null);

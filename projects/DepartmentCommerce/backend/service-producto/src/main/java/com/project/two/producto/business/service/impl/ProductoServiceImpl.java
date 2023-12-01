@@ -70,7 +70,10 @@ public class ProductoServiceImpl implements ProductoService {
         if(optionalProducto.isPresent()) {
             throw new EntityExists("Producto existe");
         }
+
+        // TODO : add validation exception
         Producto producto = this.productoRepository.save(this.productoMapper.toEntity(dto));
+
 
 
         // send kafka to topic
@@ -83,10 +86,10 @@ public class ProductoServiceImpl implements ProductoService {
 
 
         // send topic inventario
-        kafkaTemplate.send(kafkaTopicAgregarProducto,eventoInventarioDTO);
+        //kafkaTemplate.send(kafkaTopicAgregarProducto,eventoInventarioDTO);
         // send topic email
         RequestEmailDTO requestEmailDTO = new RequestEmailDTO(
-                "manuonda",
+                "manuonda@gmail.com",
                 "Creacion de Nuevo Producto  : " + producto.getName() ,
                 "",
                 null

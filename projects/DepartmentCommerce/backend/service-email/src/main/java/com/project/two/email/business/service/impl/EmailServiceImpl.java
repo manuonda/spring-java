@@ -92,6 +92,7 @@ public class EmailServiceImpl implements EmailService {
             logger.info("Send email with html and files");
 
         } catch(Exception ex ) {
+            // TODO Captura como InvalidException
             logger.error("Error send email template " + ex.getMessage());
             System.out.println("Error template : " + ex.getMessage());
         }
