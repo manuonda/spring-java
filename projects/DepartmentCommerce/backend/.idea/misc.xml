@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/service-config/pom.xml" />
         <option value="$PROJECT_DIR$/service-email/pom.xml" />
         <option value="$PROJECT_DIR$/servicio-usuarios/pom.xml" />
+        <option value="$PROJECT_DIR$/service-files/pom.xml" />
       </list>
     </option>
   </component>

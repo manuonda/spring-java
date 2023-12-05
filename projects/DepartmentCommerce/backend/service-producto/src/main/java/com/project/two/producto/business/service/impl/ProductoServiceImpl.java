@@ -16,9 +16,11 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.management.InvalidApplicationException;
 import java.util.List;
 import java.util.Optional;
 
@@ -73,7 +75,6 @@ public class ProductoServiceImpl implements ProductoService {
 
         // TODO : add validation exception
         Producto producto = this.productoRepository.save(this.productoMapper.toEntity(dto));
-
 
 
         // send kafka to topic

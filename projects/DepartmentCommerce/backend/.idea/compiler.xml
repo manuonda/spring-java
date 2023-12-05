@@ -10,6 +10,7 @@
         <module name="service-producto" />
         <module name="service-gateway" />
         <module name="service-config" />
+        <module name="service-files" />
         <module name="servicio-inventario" />
         <module name="service-commons" />
         <module name="servicio-usuarios" />
@@ -24,6 +25,7 @@
       <module name="service-config" options="-parameters" />
       <module name="service-email" options="-parameters" />
       <module name="service-eureka" options="-parameters" />
+      <module name="service-files" options="-parameters" />
       <module name="service-gateway" options="-parameters" />
       <module name="service-producto" options="-parameters" />
       <module name="servicio-inventario" options="-parameters" />

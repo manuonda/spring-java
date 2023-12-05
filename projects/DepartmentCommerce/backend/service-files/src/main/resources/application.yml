@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: services-email
+  datasource:
+    url: jdbc:postgresql://localhost:5432/database_
+
+# eureka instance
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+aws:
+  user:
+  password:

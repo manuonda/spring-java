@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: service-usuarios
+
+
+#swagger configuration
+spring-doc:
+  api-docs:
+    path: /api-docs
+
+# actuator
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+#configuration eureka server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+

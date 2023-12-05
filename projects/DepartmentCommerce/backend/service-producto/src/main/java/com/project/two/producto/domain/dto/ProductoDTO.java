@@ -20,7 +20,7 @@ public class ProductoDTO {
     private double price;
     private int qty;
 
-    @NotNull
+    @NotNull(message = "Required categoria")
     private Long idCategoria;
 
 
