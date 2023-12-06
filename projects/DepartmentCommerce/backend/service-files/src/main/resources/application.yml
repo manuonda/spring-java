@@ -13,6 +13,13 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 
+#configuration aws
 aws:
-  user:
-  password:
+  secret:
+    key: ${SECRET_KEY}
+  access:
+    key: ${ACCESS_KEY}
+  region: ${AWS_REGION}
+  bucket:
+    name: bucket-files-usuarios
+    url: https://bucket-files-usuarios.s3.us-east-1.amazonaws.com/
