@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/business/service/FileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/business/service/FileServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/domain/APIResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/advice/FileDownloadException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/advice/FileEmptyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/advice/FileUploadException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/advice/SpringBootFileUploadException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/advice/SpringBootFileUploadExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-files/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/ServiceFilesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/ServiceFilesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/config/AmazonS3Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/config/AmazonS3Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/advice/AppException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/controller/S3Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/controller/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-files/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-files/src/test/java/com/project/two/files/ServiceFilesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-files/src/test/java/com/project/two/files/ServiceFilesApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/ServicioUsuariosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/ServicioUsuariosApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
