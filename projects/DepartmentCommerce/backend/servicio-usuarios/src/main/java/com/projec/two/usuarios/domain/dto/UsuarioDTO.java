@@ -7,6 +7,6 @@ import lombok.Data;
 public class UsuarioDTO {
 
      private Long id;
-     private String username;
+     private String userName;
      private String lastName;
 }

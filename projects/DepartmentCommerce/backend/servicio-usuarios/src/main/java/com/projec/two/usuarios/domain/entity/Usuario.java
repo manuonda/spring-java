@@ -18,7 +18,6 @@ public class Usuario {
     private Long id;
     private String userName;
     private String lastName;
-    private String username;
     private String password;
     private String repeatPassword;
 }

@@ -22,11 +22,12 @@ spring:
       enabled: true
       max-file-size: 10MB #size total de la solicitud permitido
       file-size-threshold: 0 #umbral de size del archivo para almacenamiento en memoria
+  #configuration mail
   mail:
     host: ${EMAIL_HOST}
     port: 587
-    username: AKIASE4MOIVATH4YBP7Z
-    password: BI5y5fnbwQLPsIzrjOIx+Knf+23+hcyVvdzhWdee3Gr3
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
     direction: manuonda@gmail.com
     properties:
       mail:
@@ -39,6 +40,7 @@ spring:
             enable: true
             required: true
 
+  #configuratcion thymeleaf
   thymeleaf:
     prefix:
      classpath: /templates/
@@ -65,16 +67,6 @@ management:
       exposure:
         include: '*' # para exponer todos los endpoints de Actuator
 
-#configuration aws email
-cloud:
-  aws:
-    region:
-      static: us-east-1
-      auto: false
-    stack:
-      auto: false
-    credentials:
-      access-key: AKIASE4MOIVAQJK5VQU5
-      secret-key: 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
+
 
 
