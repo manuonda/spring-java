@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/mapper/UsuarioMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ContainerAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-email/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-email/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ServicioUsuariosApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ServicioUsuariosApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +37,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2Xxy85y1MUmv58eBgxjy5hn202Z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
