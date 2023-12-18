@@ -12,6 +12,7 @@ public record RequestEmailDTO(
         String to,
         String subject,
         String body,
+
         List<MultipartFile> list
 ) {
 }

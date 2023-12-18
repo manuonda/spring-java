@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service-email/src/main/resources/templates/alta-usuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/config/KafkaTopic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/ValidationErrorResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/advice/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/advice/EntityFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/advice/EntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/V1__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/template/alta-usuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/RequestEmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/RequestEmailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ContainerAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/BaseRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ServicioUsuariosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +70,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/manuonda/projects/cicd_example&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/manuonda/projects/spring-java/projects/DepartmentCommerce/backend",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.project.two.email.config" />
       <recent name="com.project.two.inventario.domain.entity" />
@@ -66,18 +96,21 @@
       <recent name="com.project.two.producto.service.impl" />
       <recent name="com.project.two.producto.presentation.advice" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.projec.two.usuarios.repository" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.project.two.inventario.business.mapper" />
       <recent name="com.project.two.commons.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileUploadControllerTest">
-    <configuration name="ServiceFilesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.project.two.files.ServiceFilesApplication" />
-      <module name="service-files" />
+  <component name="RunManager" selected="Application.ServicioUsuariosApplication">
+    <configuration name="ServicioInventarioApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.inventario.ServicioInventarioApplication" />
+      <module name="servicio-inventario" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.two.files.*" />
+          <option name="PATTERN" value="com.project.two.inventario.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicioInventarioApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.project.two.inventario.ServicioInventarioApplication" />
-      <module name="servicio-inventario" />
+    <configuration name="ServicioUsuariosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.ServicioUsuariosApplication" />
+      <module name="servicio-usuarios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.two.inventario.*" />
+          <option name="PATTERN" value="com.projec.two.usuarios.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,49 +147,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUploadControllerTest.shouldDownloadFile_returnObjectText" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-files" />
+    <configuration name="UsuarioRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="servicio-usuarios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.two.files.*" />
+          <option name="PATTERN" value="com.projec.two.usuarios.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.files" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.files.FileUploadControllerTest" />
-      <option name="METHOD_NAME" value="shouldDownloadFile_returnObjectText" />
+      <option name="PACKAGE_NAME" value="com.projec.two.usuarios.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.repository.UsuarioRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioRepositoryTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="servicio-usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.projec.two.usuarios.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.projec.two.usuarios.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.repository.UsuarioRepositoryTest" />
+      <option name="METHOD_NAME" value="name" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUploadControllerTest.shouldRejectEmptyFileName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-files" />
+    <configuration name="UsuarioRepositoryTest.shouldSaveUsuario_whenCallSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="servicio-usuarios" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.two.files.*" />
+          <option name="PATTERN" value="com.projec.two.usuarios.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.files" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.files.FileUploadControllerTest" />
-      <option name="METHOD_NAME" value="shouldRejectEmptyFileName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileUploadControllerTest.shouldReturnNotFoundIfFileNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-files" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.two.files.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.files" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.files.FileUploadControllerTest" />
-      <option name="METHOD_NAME" value="shouldReturnNotFoundIfFileNotFound" />
+      <option name="PACKAGE_NAME" value="com.projec.two.usuarios.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.repository.UsuarioRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldSaveUsuario_whenCallSave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,19 +196,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.ServicioInventarioApplication" />
-      <item itemvalue="Application.ServiceFilesApplication" />
-      <item itemvalue="JUnit.FileUploadControllerTest.shouldDownloadFile_returnObjectText" />
-      <item itemvalue="JUnit.FileUploadControllerTest.shouldRejectEmptyFileName" />
-      <item itemvalue="JUnit.FileUploadControllerTest.shouldReturnNotFoundIfFileNotFound" />
+      <item itemvalue="Application.ServicioUsuariosApplication" />
+      <item itemvalue="JUnit.UsuarioRepositoryTest" />
+      <item itemvalue="JUnit.UsuarioRepositoryTest.name" />
+      <item itemvalue="JUnit.UsuarioRepositoryTest.shouldSaveUsuario_whenCallSave" />
       <item itemvalue="JUnit.FileUploadControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServicioUsuariosApplication" />
+        <item itemvalue="JUnit.UsuarioRepositoryTest" />
+        <item itemvalue="JUnit.UsuarioRepositoryTest.name" />
+        <item itemvalue="JUnit.UsuarioRepositoryTest.shouldSaveUsuario_whenCallSave" />
         <item itemvalue="JUnit.FileUploadControllerTest" />
-        <item itemvalue="JUnit.FileUploadControllerTest.shouldRejectEmptyFileName" />
-        <item itemvalue="JUnit.FileUploadControllerTest.shouldDownloadFile_returnObjectText" />
-        <item itemvalue="JUnit.FileUploadControllerTest.shouldReturnNotFoundIfFileNotFound" />
-        <item itemvalue="Application.ServiceFilesApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -402,6 +434,11 @@
           <url>file://$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/presentation/controller/FileUploadController.java</url>
           <line>86</line>
           <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/business/service/FileService.java</url>

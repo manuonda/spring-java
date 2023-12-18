@@ -1,6 +1,34 @@
+server:
+  port: ${SERVER_PORT_USUARIO:8087}
 spring:
   application:
     name: service-usuarios
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/${DB_NAME_COMMERCE:db_commerce}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:root}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+
+  #configuration kafka
+  kafka:
+    bootstrap-servers: localhost:29092
+    topic:
+      envio_email: envio_email
+
+  #configuration thymeleaf
+  thymeleaf:
+    prefix:
+      classpath: /templates/
+    suffix: .ftl
+    encoding: UTF-8
+    mode: HTML
+
+
+
 
 
 #swagger configuration
@@ -18,7 +46,7 @@ management:
       exposure:
         include: '*'
 
-#configuration eureka server
+#configuration eureka client
 eureka:
   instance:
     hostname: localhost

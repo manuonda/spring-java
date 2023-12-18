@@ -46,7 +46,7 @@ management:
         include: '*' # Para exponer todos los endpoints de Actuator, puedes personalizar esta lista según tus necesidades
 
 
-#configuration eureka server
+#configuration eureka client
 eureka:
   instance:
     hostname: localhost
