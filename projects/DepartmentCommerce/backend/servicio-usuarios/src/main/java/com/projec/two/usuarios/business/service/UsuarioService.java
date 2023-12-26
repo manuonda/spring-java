@@ -10,5 +10,9 @@ public interface UsuarioService {
 
     UsuarioDTO update(UsuarioDTO usuarioDTO);
 
+    List<UsuarioDTO> list();
+
+    List<UsuarioDTO> paginable(int page, int size);
+
 
 }

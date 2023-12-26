@@ -2,9 +2,11 @@ package com.projec.two.usuarios.domain.dto;
 
 
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class UsuarioDTO {
 
      private Long id;

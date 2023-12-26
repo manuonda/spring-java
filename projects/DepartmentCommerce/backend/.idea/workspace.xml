@@ -5,32 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c332a10-7cd3-4699-b0bd-9878b607f119" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service-email/src/main/resources/templates/alta-usuario.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/config/KafkaTopic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/ValidationErrorResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/advice/AppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/advice/EntityFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/advice/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/V1__init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/template/alta-usuario.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-producto/src/test/java/com/project/two/producto/BaseContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/util/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/controller/UsuarioControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/service/UsuariosServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/course-docker-kubernetes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/business/mapper/UsuarioMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/domain/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/test/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/microservice-usuarios/src/test/java/com/docker/kubernetes/usuarios/TestMicroserviceUsuariosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/business/mapper/UsuarioMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/domain/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/java/com/docker/kubernetes/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/test/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../course-docker-kubernetes/src/test/java/com/docker/kubernetes/usuarios/TestMicroserviceUsuariosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/RequestEmailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-commons/src/main/java/com/project/two/commons/dto/RequestEmailDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-producto/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-producto/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-inventario/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-inventario/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/ServicioUsuariosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/ServicioUsuariosApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ContainerAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/BaseRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/ServicioUsuariosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/template/alta-usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/main/resources/templates/alta-usuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +83,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Enum" />
         <option value="Kotlin Class" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -78,7 +120,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/manuonda/projects/spring-java/projects/DepartmentCommerce/backend",
+    "last_opened_file_path": "/home/manuonda/projects/spring-java/projects/course-docker-kubernetes",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -105,6 +147,45 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.ServicioUsuariosApplication">
+    <configuration name="ServiceEmailApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.email.ServiceEmailApplication" />
+      <module name="service-email" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.two.email.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceEurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.eureka.ServiceEurekaApplication" />
+      <module name="service-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.two.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.project.two.gateway.ServiceGatewayApplication" />
+      <module name="service-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.two.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServicioInventarioApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.project.two.inventario.ServicioInventarioApplication" />
       <module name="servicio-inventario" />
@@ -131,84 +212,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUploadControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="service-files" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.two.files.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.two.files" />
-      <option name="MAIN_CLASS_NAME" value="com.project.two.files.FileUploadControllerTest" />
-      <option name="METHOD_NAME" value="shouldDownloadFile_returnObjectText" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="servicio-usuarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projec.two.usuarios.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projec.two.usuarios.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.repository.UsuarioRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioRepositoryTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="servicio-usuarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projec.two.usuarios.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projec.two.usuarios.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.repository.UsuarioRepositoryTest" />
-      <option name="METHOD_NAME" value="name" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsuarioRepositoryTest.shouldSaveUsuario_whenCallSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="servicio-usuarios" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.projec.two.usuarios.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.projec.two.usuarios.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.projec.two.usuarios.repository.UsuarioRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldSaveUsuario_whenCallSave" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.ServicioInventarioApplication" />
+      <item itemvalue="Application.ServiceEmailApplication" />
+      <item itemvalue="Application.ServiceGatewayApplication" />
+      <item itemvalue="Application.ServiceEurekaApplication" />
       <item itemvalue="Application.ServicioUsuariosApplication" />
-      <item itemvalue="JUnit.UsuarioRepositoryTest" />
-      <item itemvalue="JUnit.UsuarioRepositoryTest.name" />
-      <item itemvalue="JUnit.UsuarioRepositoryTest.shouldSaveUsuario_whenCallSave" />
-      <item itemvalue="JUnit.FileUploadControllerTest" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ServicioUsuariosApplication" />
-        <item itemvalue="JUnit.UsuarioRepositoryTest" />
-        <item itemvalue="JUnit.UsuarioRepositoryTest.name" />
-        <item itemvalue="JUnit.UsuarioRepositoryTest.shouldSaveUsuario_whenCallSave" />
-        <item itemvalue="JUnit.FileUploadControllerTest" />
+        <item itemvalue="Application.ServiceEmailApplication" />
+        <item itemvalue="Application.ServiceEurekaApplication" />
+        <item itemvalue="Application.ServiceGatewayApplication" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -437,8 +463,63 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java</url>
-          <line>45</line>
+          <line>44</line>
           <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/service-files/src/main/java/com/project/two/files/business/service/FileService.java</url>
@@ -456,6 +537,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/servicio-usuarios/src/test/java/com/projec/two/usuarios/service/UsuariosServiceTest.java</url>
+          <line>34</line>
+          <properties class="com.projec.two.usuarios.service.UsuariosServiceTest" method="shouldSaveUsuario_whenSaveUsuario_returnObject">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

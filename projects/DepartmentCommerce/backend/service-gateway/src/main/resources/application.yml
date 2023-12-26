@@ -29,6 +29,10 @@ spring:
           uri: http://localhost:8086
           predicates:
             - Path=/api/v1/emails/**
+        - id: usuarios
+          uri: http://localhost:8087
+          predicates:
+            - Path=/api/v1/usuarios/**
 
 
 

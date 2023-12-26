@@ -16,10 +16,10 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@Testcontainers
 public class UsuarioRepositoryTest {
 
-
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     @Container
     @ServiceConnection
@@ -28,8 +28,7 @@ public class UsuarioRepositoryTest {
     );
 
 
-    @Autowired
-    private UsuarioRepository usuarioRepository;
+
 
     @Test
     @DisplayName("Save Usuario ")
@@ -62,7 +61,7 @@ public class UsuarioRepositoryTest {
                 .repeatPassword("123456")
                 .build();
         //when
-        Usuario usuarioSave  = usuarioRepository.save(usuario);
+        Usuario usuarioSave  = this.usuarioRepository.save(usuario);
 
         //then
     }

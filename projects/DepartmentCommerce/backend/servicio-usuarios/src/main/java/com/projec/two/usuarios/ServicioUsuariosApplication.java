@@ -2,8 +2,10 @@ package com.projec.two.usuarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class ServicioUsuariosApplication {
 
 	// TODO: realizar una registration de usuairo y enviar

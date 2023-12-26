@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73eab48a-2f5a-404c-a423-a7240d98beb6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-producto/src/test/java/com/project/two/producto/BaseContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/util/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/test/java/com/projec/two/usuarios/controller/UsuarioControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/test/java/com/projec/two/usuarios/service/UsuariosServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/course-docker-kubernetes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/business/mapper/UsuarioMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/domain/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/java/com/docker/kubernetes/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/test/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-usuarios/src/test/java/com/docker/kubernetes/usuarios/TestMicroserviceUsuariosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/business/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/business/mapper/UsuarioMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/domain/dto/ResponseExceptionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/domain/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/presentation/advice/EntityNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docker/kubernetes/usuarios/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/docker/kubernetes/usuarios/MicroserviceUsuariosApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/docker/kubernetes/usuarios/TestMicroserviceUsuariosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-producto/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-producto/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-producto/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/service-producto/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-inventario/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-inventario/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/ServicioUsuariosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/ServicioUsuariosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/business/service/impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/java/com/projec/two/usuarios/presentation/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/resources/template/alta-usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/main/resources/templates/alta-usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DepartmentCommerce/backend/servicio-usuarios/src/test/java/com/projec/two/usuarios/repository/UsuarioRepositoryTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2a5N32XHuW6so4mS2ZkuhWq1m9f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/manuonda/projects/spring-java/projects/course-docker-kubernetes"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73eab48a-2f5a-404c-a423-a7240d98beb6" name="Changes" comment="" />
+      <created>1703604277424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703604277424</updated>
+    </task>
+    <servers />
+  </component>
+</project>
