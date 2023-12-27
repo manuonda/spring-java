@@ -60,7 +60,9 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Override
     public UsuarioDTO update(UsuarioDTO dto, Long id) {
         Usuario usuario = this.usuarioRepository.findById(id)
-                .orElseThrow(() -> throw new EntityNotFound("Usuario by Id no existe"));
+                .orElseThrow(() -> {
+                     throw new EntityNotFound("Usuario by Id no existe");
+                });
 
         Optional<Usuario> findByUsernName  = this.usuarioRepository
                 .findByUsername(dto.getUsername());
