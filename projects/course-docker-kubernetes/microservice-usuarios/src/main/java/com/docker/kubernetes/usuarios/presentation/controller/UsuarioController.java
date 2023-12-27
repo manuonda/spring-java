@@ -24,7 +24,7 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<UsuarioDTO>> findAll(){
         List<UsuarioDTO> list = this.usuarioService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(list);

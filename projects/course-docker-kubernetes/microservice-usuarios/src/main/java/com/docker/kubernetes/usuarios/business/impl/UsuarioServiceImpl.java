@@ -26,7 +26,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public UsuarioDTO findByUsername(String username) {
-        Usuario usuario = this.usuarioRepository.findByUsername(username)
+        Usuario usuario = this.usuarioRepository.findByUserName(username)
                 .orElseThrow(() -> new EntityNotFound("Usuario no existe"));
         return this.usuarioMapper.toDTO(usuario);
 
@@ -35,7 +35,7 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Override
     public UsuarioDTO save(UsuarioDTO usuarioDTO) {
         Optional<Usuario> findByUsername = this.usuarioRepository
-                .findByUsername(usuarioDTO.getUsername());
+                .findByUserName(usuarioDTO.getUserName());
 
         Optional<Usuario> findByEmail = this.usuarioRepository.findByEmail(usuarioDTO.getEmail());
         if ( findByUsername.isPresent()){
@@ -65,7 +65,7 @@ public class UsuarioServiceImpl implements UsuarioService{
                 });
 
         Optional<Usuario> findByUsernName  = this.usuarioRepository
-                .findByUsername(dto.getUsername());
+                .findByUserName(dto.getUserName());
 
         return null;
     }

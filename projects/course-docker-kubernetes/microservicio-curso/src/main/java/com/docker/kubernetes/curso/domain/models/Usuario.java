@@ -1,10 +1,8 @@
-package com.docker.kubernetes.usuarios.domain.entity;
+package com.docker.kubernetes.curso.domain.models;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 

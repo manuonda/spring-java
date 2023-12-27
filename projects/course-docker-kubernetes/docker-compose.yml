@@ -1,12 +1,14 @@
 services:
   postgres:
     image: 'postgres:latest'
+    container_name: postgresql_container
     ports:
       - "5432:5432"
     environment:
      - 'POSTGRES_USER=root'
      - 'POSTGRES_PASSWORD=root'
      - 'POSTGRES_DB=db_course'
-
+    volumes:
+      - ./data_postgresql:/var/lib/postgresql/data
 volumes:
   postgres_data:

@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
-    name: service-usuarios
+    name: service-cursos
   datasource:
     username: ${POSTGRES_USER:root}
     password: ${POSTGRES_PASSWORD:root}
@@ -13,5 +13,4 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: true
-
 

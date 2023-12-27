@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Getter
 @Setter
-public class ValidationErrorResponseDTO {
+public class    ValidationErrorResponseDTO {
 
     private Map<String, String> errors;
 
