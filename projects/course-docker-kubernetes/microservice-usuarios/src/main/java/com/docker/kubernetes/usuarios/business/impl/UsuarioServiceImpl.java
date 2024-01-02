@@ -9,8 +9,10 @@ import com.docker.kubernetes.usuarios.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Function;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService{
@@ -76,5 +78,20 @@ public class UsuarioServiceImpl implements UsuarioService{
                .orElseThrow(() -> new EntityNotFound("Usuario no existe"));
 
        this.usuarioRepository.delete(usuario);
+    }
+
+    @Override
+    public UsuarioDTO findById(Long id) {
+        Usuario usuario = this.usuarioRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFound("Usuario no existe"));
+        return this.usuarioMapper.toDTO(usuario);
+    }
+
+    @Override
+    public List<UsuarioDTO> findByIds(List<Long> ids) {
+        List<Usuario> listUsuario = this.usuarioRepository.findByIds(ids);
+        return listUsuario.stream()
+                .map(this.usuarioMapper::toDTO)
+                .toList();
     }
 }

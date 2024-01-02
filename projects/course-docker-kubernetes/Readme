@@ -1,0 +1,8 @@
+# Para crear la imagen a partir de un docker file es el siguiente :
+ docker build -t msc-curso:1.0 .
+
+# Para correr una imagen como container
+ docker run --name service-cursos -p 8082:8082 --network spring msc-curso:1.0
+
+# Para correr con variables de ambiente
+docker run --name service-cursos -p 8082 --env-file .env --rm --name service-cursos --network spring msc-curso:1.0

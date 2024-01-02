@@ -1,4 +1,4 @@
-package com.docker.kubernetes.usuarios.domain.entity;
+    package com.docker.kubernetes.usuarios.domain.entity;
 
 
 import jakarta.persistence.*;

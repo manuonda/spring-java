@@ -17,4 +17,14 @@ public interface UsuarioService {
 
     void delete(Long id);
 
+    UsuarioDTO findById(Long id);
+
+    /**
+     * Obtengo un listado de usuarios
+     * por los ids
+     * @param ids
+     * @return
+     */
+    List<UsuarioDTO> findByIds(List<Long> ids);
+
 }

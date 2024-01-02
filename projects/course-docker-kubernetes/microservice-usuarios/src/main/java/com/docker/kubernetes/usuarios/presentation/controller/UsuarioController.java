@@ -48,4 +48,18 @@ public class UsuarioController {
       this.usuarioService.delete(id);
       return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findById(@PathVariable("id") Long id){
+        UsuarioDTO usuario = this.usuarioService.findById(id);
+        return ResponseEntity.status(HttpStatus.OK).body(usuario);
+    }
+
+    @PostMapping("/find-usuarios-by-ids")
+    public ResponseEntity<List<UsuarioDTO>> findUsuariosByIds(@RequestBody List<Long> ids){
+        List<UsuarioDTO> list = this.usuarioService.findByIds(ids);
+        return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+
 }
