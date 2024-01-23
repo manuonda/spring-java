@@ -3,17 +3,17 @@ server:
 
 spring:
   application:
-    name: service-cursos
+    name: msvc-cursos
   datasource:
     username: ${POSTGRES_USER:root}
     password: ${POSTGRES_PASSWORD:root}
-    url: jdbc:postgresql://${DB_HOST:postgresql_container}:5432/${DB_NAME:db_course}
+    url: jdbc:postgresql://${DB_HOST:postgresql-container}:5432/${DB_NAME:db_course}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
       show-sql: true
 
-#name services
+#name services : msvc-usuarios seria el nombre del microservicio levantado en el docker
 service:
-  usuarios: ${SERVICE_USUARIOS:service-usuarios:8081}
+  usuarios: ${SERVICE_USUARIOS:msvc-usuarios:8081}

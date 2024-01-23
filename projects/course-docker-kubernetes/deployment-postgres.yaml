@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: postgresql-container
+  name: postgresql-container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgresql-container
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: postgresql-container
+    spec:
+      containers:
+      - image: postgres:latest
+        name: postgres
+        ports:
+        - containerPort: 5432
+        env :
+        - name: POSTGRES_USER
+          value: root
+        - name: POSTGRES_PASSWORD
+          value: root
+        - name: DB_HOST
+          value: postgresql-container
+        - name: POSTGRES_DB
+          value: db_course
+        resources: {}
+status: {}

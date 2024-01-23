@@ -6,3 +6,25 @@
 
 # Para correr con variables de ambiente
 docker run --name service-cursos -p 8082 --env-file .env --rm --name service-cursos --network spring msc-curso:1.0
+
+
+
+
+# 1 - Kubernetes para crear un deployment:
+kubectl create deployment postgres
+# 2 - En caso de que se archivo con environment se crea un file
+kubectl  create deployment postgres --image=postgres:latest --port=5432 --dry-run=client -o yaml > deployment-postgres.yaml
+# 2.1 se escribe dentro los environment para postgres
+# 3 - Aplica el cambio con este comando del archivo yaml
+kubectl apply -f  deployment-postgres.yaml
+# 4 - Expose hostname: postgres para comunicacion interna
+kubectl expose deployment postgres --port=5432 --type=ClusterIP
+
+
+# Microservicio Usuarios
+#1 -  Create deployment usuarios
+ kubectl create deployment msv-usuarios --image=manuonda/curso-docker-msc-usuarios:1.1 --port=8081
+# 2 - para exponer al servicio extenrno por eso load abalancer
+kubectl expose deployment msvc-usuarios --port=8081 --type=LoadBalancer
+# 3 - Para exponer la api hacia afuera se usa minikube
+ minikube service msvc-usuarios --url => Genera una Url para comunicacion interna externa

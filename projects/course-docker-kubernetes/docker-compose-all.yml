@@ -1,0 +1,65 @@
+version: "3.9"
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgresql-container
+    ports:
+      - "5432:5432"
+    environment:
+      - 'POSTGRES_USER=root'
+      - 'POSTGRES_PASSWORD=root'
+      - 'POSTGRES_DB=db_course'
+    volumes:
+      - ./data_postgresql:/var/lib/postgresql/data
+    networks:
+      - spring
+
+  msvc-usuarios:
+    container_name: msvc-usuarios
+    image: manuonda/curso-docker-msc-usuarios:1.1
+    #build:
+    #  context: ./
+    #  dockerfile: ./microservice-usuarios/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      PORT: 8081
+      DB_HOST: postgresql-container
+      DB_DATABASE: db_course
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      CURSOS_URL: msvc-cursos:8082
+    networks:
+      - spring
+    depends_on:
+      - postgres
+    restart: always
+
+  msvc-cursos:
+    container_name: msvc-cursos
+    image: manuonda/curso-docker-msc-curso:1.1
+    #build:
+    # context: ./
+    # dockerfile: ./microservicio-curso/Dockerfile
+    ports:
+      - "8082:8082"
+    environment:
+      PORT: 8082
+      DB_HOST: postgresql-container
+      DB_DATABASE: db_course
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      USUARIOS_URL: msvc-usuarios:8081
+    networks:
+      - spring
+    depends_on:
+      - postgres
+      - msvc-usuarios
+    restart: always
+
+volumes:
+  postgres_data:
+
+networks:
+  spring:
+    name: spring

@@ -2,7 +2,7 @@
 services:
   postgres:
     image: 'postgres:latest'
-    container_name: postgresql_container
+    container_name: postgresql-container
     ports:
       - "5432:5432"
     environment:
@@ -15,37 +15,42 @@ services:
       - spring
 
 
-  msc-usuarios:
-    container_name: service-usuarios
-    build:
-      context: .
-      dockerfile: microservice-usuarios/Dockerfile
-    ports:
-      - "8081:8081"
-    environment:
-     - ./microservice-usuarios/.env
-    depends_on:
-      - postgres
-    networks:
-      - spring
-    restart: always
-
-
-  msc-cursos:
-    container_name: service-cursos
-    build:
-      context: .
-      dockerfile: microservicio-curso/Dockerfile
-    ports:
-      - "8082:8082"
-    environment:
-     - ./microservicio-curso/.env
-    depends_on:
-      - postgres
-      - msc-usuarios
-    networks:
-      - spring
-    restart: always
+#  msc-usuarios:
+#    container_name: service-usuarios
+#    build:
+#      context: .
+#      dockerfile: microservice-usuarios/Dockerfile
+#    ports:
+#      - "8081:8081"
+#    environment:
+#     - ./microservice-usuarios/.env
+#    depends_on:
+#      - postgres
+#    networks:
+#      - spring
+#    restart: always
+#
+#
+#  msc-cursos:
+#    container_name: service-cursos
+#    build:
+#      context: .
+#      dockerfile: microservicio-curso/Dockerfile
+#    ports:
+#      - "8082:8082"
+#    environment:
+#      PORT: 8081
+#      POSTGRES_USER: root
+#      POSTGRES_PASSWORD: root
+#      DB_HOST: postgresql_container:5432
+#      DB_NAME: db_course
+#      SERVICE_USUARIOS: service-usuarios:8081
+#    depends_on:
+#      - postgres
+#      - msc-usuarios
+#    networks:
+#      - spring
+#    restart: always
 
 volumes:
   postgres_data:
