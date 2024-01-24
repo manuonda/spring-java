@@ -6,6 +6,9 @@ import com.docker.kubernetes.usuarios.domain.dto.UsuarioDTO;
 import com.docker.kubernetes.usuarios.domain.entity.Usuario;
 import feign.Response;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +23,10 @@ public class UsuarioController {
 
     private final UsuarioService usuarioService;
 
+
+    @Autowired
+    private ApplicationContext  context;
+
     public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
@@ -28,6 +35,12 @@ public class UsuarioController {
     public ResponseEntity<List<UsuarioDTO>> findAll(){
         List<UsuarioDTO> list = this.usuarioService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    @GetMapping("/crash")
+    public void crash(){
+        ((ConfigurableApplicationContext) context).close();
+
     }
 
     @PostMapping("/save")

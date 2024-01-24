@@ -1,9 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
-  labels:
-    app: postgresql-container
   name: postgresql-container
 spec:
   replicas: 1

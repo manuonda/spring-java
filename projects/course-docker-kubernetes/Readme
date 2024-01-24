@@ -28,3 +28,11 @@ kubectl expose deployment postgres --port=5432 --type=ClusterIP
 kubectl expose deployment msvc-usuarios --port=8081 --type=LoadBalancer
 # 3 - Para exponer la api hacia afuera se usa minikube
  minikube service msvc-usuarios --url => Genera una Url para comunicacion interna externa
+# 4 - En el caso de actualizar una imagen nueva se genera con el siguiente comando :
+ kubectl set image deployment msvc-usuarios  curso-docker-msc-usuarios=manuonda/curso-docker-msc-usuarios:1.2
+# 5 - Levantar replicas
+ kubectl scale deployment msvc-usuarios --replicas=3
+
+
+#Create file deployment msvc-usuarios : --dry-run=client indica que no crear el deployment
+kubectl create deployment msvc-usuarios --image=manuonda/curso-docker-msc-usuarios:1.2  --dry-run=client -o yaml --port=8081 > deployment-msvc-usuarios.yaml
