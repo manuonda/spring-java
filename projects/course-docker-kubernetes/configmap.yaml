@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: msvc-curso
+data:
+    port: "8082"   # Se ha envuelto el valor numérico en comillas para que sea una cadena
+    db_host: postgresql_container
+    postgres_user: root
+    postgres_password: root
+    db_name: db_course
+    service_usuarios: msvc-usuarios:8081
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: msvc-usuario
+data:
+    port: "8081"   # Igualmente, se ha envuelto el valor numérico en comillas
+    db_host: postgresql_container
+    postgres_user: root
+    postgres_password: root
+    db_name: db_course

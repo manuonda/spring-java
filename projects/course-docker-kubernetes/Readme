@@ -36,3 +36,13 @@ kubectl expose deployment msvc-usuarios --port=8081 --type=LoadBalancer
 
 #Create file deployment msvc-usuarios : --dry-run=client indica que no crear el deployment
 kubectl create deployment msvc-usuarios --image=manuonda/curso-docker-msc-usuarios:1.2  --dry-run=client -o yaml --port=8081 > deployment-msvc-usuarios.yaml
+
+# delete deployment and create deployment
+  kubectl delete deployment mscv-usuarios
+  kubectl apply -f deployment-msvc-usuarios.yaml
+
+
+# para los volumenes esta pv, pvc y apply deployment de postgresql
+ kubectl apply -f postgresql-pv.yaml
+ kubectl apply -f postgresql-pvc.yaml
+ kubectl apply -f deployment-postgres.yaml

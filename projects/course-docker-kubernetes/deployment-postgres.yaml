@@ -21,12 +21,25 @@ spec:
         - containerPort: 5432
         env :
         - name: POSTGRES_USER
-          value: root
+          #value: root
+          valueFrom:
+            configMapKeyRef:
+              - name: 
         - name: POSTGRES_PASSWORD
           value: root
         - name: DB_HOST
           value: postgresql-container
         - name: POSTGRES_DB
           value: db_course
-        resources: {}
+        volumeMounts:
+         - name: postgres-data
+           mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: postgresql-data-pvc
+            readOnly: false
+          #hostPath:    #hostPath es fuera del pod
+          # path: /var/lib/postgresql/data
+          # type: DirectoryOrCreate
 status: {}

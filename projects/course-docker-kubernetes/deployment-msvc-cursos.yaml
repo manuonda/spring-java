@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-cursos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-cursos
+  template:
+    metadata:
+      labels:
+        app: msvc-cursos
+    spec:
+      containers:
+        - image: manuonda/curso-docker-msc-curso:1.1
+          name: curso-docker-msc-curso
+          ports:
+            - containerPort: 8082
+          resources: {}
