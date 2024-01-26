@@ -17,4 +17,11 @@ spec:
           name: curso-docker-msc-curso
           ports:
             - containerPort: 8082
+          env :
+            - name: SERVICE_USUARIOS
+              #value: msvc-usuarios:8081
+              valueFrom:
+                configMapKeyRef:
+                  name: msvc-curso
+                  key: service_usuarios
           resources: {}
