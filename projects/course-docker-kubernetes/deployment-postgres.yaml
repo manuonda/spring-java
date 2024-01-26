@@ -24,13 +24,26 @@ spec:
           #value: root
           valueFrom:
             configMapKeyRef:
-              - name: 
+              name: msvc-curso
+              key: postgres_user
         - name: POSTGRES_PASSWORD
-          value: root
+          #value: root
+          valueFrom:
+            configMapKeyRef:
+              name: msvc-curso
+              key: postgres_password
         - name: DB_HOST
-          value: postgresql-container
+          #value: postgresql-container
+          valueFrom:
+            configMapKeyRef:
+              name: msvc-curso
+              key: db_host
         - name: POSTGRES_DB
-          value: db_course
+          #value: db_course
+          valueFrom:
+            configMapKeyRef:
+              name: msvc-curso
+              key: db_name
         volumeMounts:
          - name: postgres-data
            mountPath: /var/lib/postgresql/data
