@@ -46,3 +46,7 @@ kubectl create deployment msvc-usuarios --image=manuonda/curso-docker-msc-usuari
  kubectl apply -f postgresql-pv.yaml
  kubectl apply -f postgresql-pvc.yaml
  kubectl apply -f deployment-postgres.yaml
+
+ # Para crear la conexion por nombre de servicios en load balancer
+ kubectl create clusterrolebinding admin --clusterrole=cluster-admin --serviceaccount=default:default
+

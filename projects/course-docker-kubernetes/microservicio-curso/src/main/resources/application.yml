@@ -14,6 +14,15 @@ spring:
       ddl-auto: update
       show-sql: true
 
+  cloud:
+    kubernetes:
+      secrets:
+        enable-api: true
+      discovery:
+        all-namespaces: true
+  profiles:
+    active: dev
+
 #name services : msvc-usuarios seria el nombre del microservicio levantado en el docker
 service:
   usuarios: ${SERVICE_USUARIOS:msvc-usuarios:8081}

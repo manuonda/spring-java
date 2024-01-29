@@ -117,6 +117,30 @@
 			<version>1.5.3.Final</version>
 		</dependency>
 
+		<!-- spring cloud kubernetes client
+		<dependency>
+			<groupId>org.spring.framework.cloud</groupId>
+			<artifactId>spring-cloud-kubernetes-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.spring.framework.cloud</groupId>
+			<artifactId>spring-cloud-kubernetes-client-loadbalancer</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.spring.framework.cloud</groupId>
+			<artifactId>spring-cloud-kubernetes-client-config</artifactId>
+		</dependency>
+		-->
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-kubernetes-dependencies</artifactId>
+			<version>3.1.0</version>
+			<type>pom</type>
+		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

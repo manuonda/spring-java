@@ -29,8 +29,8 @@ spec:
         - name: POSTGRES_PASSWORD
           #value: root
           valueFrom:
-            configMapKeyRef:
-              name: msvc-curso
+            secretKeyRef:
+              name: secret-postgres
               key: postgres_password
         - name: DB_HOST
           #value: postgresql-container

@@ -9,12 +9,16 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/api/v1/usuarios")
 @RestController
@@ -27,6 +31,10 @@ public class UsuarioController {
     @Autowired
     private ApplicationContext  context;
 
+    @Autowired
+    private Environment environment;
+
+
     public UsuarioController(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
@@ -35,6 +43,15 @@ public class UsuarioController {
     public ResponseEntity<List<UsuarioDTO>> findAll(){
         List<UsuarioDTO> list = this.usuarioService.findAll();
         return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    @GetMapping("/listar2")
+    public ResponseEntity<?> listar(){
+        Map<String, Object> body =new HashMap<>();
+        body.put("users", this.usuarioService.findAll());
+        body.put("podinfo", environment.getProperty("MY_POD_NAME") + "-"+ environment.getProperty("MY_POD_IP"));
+        body.put("texto", environment.getRequiredProperty("config.texto"));
+        return ResponseEntity.ok(body);
     }
 
     @GetMapping("/crash")

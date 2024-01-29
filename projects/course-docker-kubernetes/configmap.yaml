@@ -6,17 +6,33 @@ data:
     port: "8082"   # Se ha envuelto el valor numérico en comillas para que sea una cadena
     db_host: postgresql_container
     postgres_user: root
-    postgres_password: root
+    #ahora se configura por secret.yaml.
+    #postgres_password: root
     db_name: db_course
     service_usuarios: msvc-usuarios:8081
+
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: msvc-usuario
+  name: msvc-usuario
 data:
-    port: "8081"   # Igualmente, se ha envuelto el valor numérico en comillas
-    db_host: postgresql_container
-    postgres_user: root
-    postgres_password: root
-    db_name: db_course
+  port: "8081"
+  db_host: postgresql_container
+  postgres_user: root
+  postgres_password: root
+  db_name: db_course
+  msvc-usuarios.yaml: |-
+    spring:
+      config:
+        activate:
+          on-profile: dev
+    config:
+      texto: Configurando ambiente de desarrollo
+    ---
+    spring:
+      config:
+        activate:
+          on-profile: prod
+    config:
+      texto: Configurando ambiente de produccion
