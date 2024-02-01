@@ -50,7 +50,7 @@ public class UsuarioController {
         Map<String, Object> body =new HashMap<>();
         body.put("users", this.usuarioService.findAll());
         body.put("podinfo", environment.getProperty("MY_POD_NAME") + "-"+ environment.getProperty("MY_POD_IP"));
-        body.put("texto", environment.getRequiredProperty("config.texto"));
+        //body.put("texto", environment.getRequiredProperty("config.texto"));
         return ResponseEntity.ok(body);
     }
 

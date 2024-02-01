@@ -6,7 +6,7 @@ metadata:
     app: msvc-usuarios
   name: msvc-usuarios
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: msvc-usuarios
@@ -20,6 +20,7 @@ spec:
       containers:
         - image: manuonda/curso-docker-msc-usuarios:latest
           name: curso-docker-msc-usuarios
+          #referencia a actuator
           ports:
             - containerPort: 8081
           env:
@@ -43,5 +44,30 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.serviceAccountName
-          resources: {}
+          #configuration of actuator
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8081
+              scheme: HTTP
+            initialDelaySeconds: 5 #levanta despues mi container de 5 segundos
+            periodSeconds: 20  #se ejecuta un perido de 10 segundos de veirification
+            timeoutSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8081
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 20
+            timeoutSeconds: 10
+          #definition of resources
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "500m"
+            limits:
+              memory: "256Mi"
+              cpu: "1000m"
+
 status: {}

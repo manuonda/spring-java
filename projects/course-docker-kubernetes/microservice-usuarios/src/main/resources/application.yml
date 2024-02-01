@@ -14,6 +14,8 @@ spring:
       ddl-auto: update
       show-sql: true
 
+
+
   #configurcion spring cloud
   cloud:
     kubernetes:
@@ -27,3 +29,21 @@ spring:
 #name services
 #service:
 #  usuarios: ${SERVICE_USUARIOS:service-usuarios:8081}
+
+#spring boot-actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    probes:
+      enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
