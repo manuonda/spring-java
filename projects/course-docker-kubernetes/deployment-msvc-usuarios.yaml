@@ -6,7 +6,7 @@ metadata:
     app: msvc-usuarios
   name: msvc-usuarios
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: msvc-usuarios
@@ -45,22 +45,22 @@ spec:
                 fieldRef:
                   fieldPath: spec.serviceAccountName
           #configuration of actuator
-          readinessProbe:
-            httpGet:
-              path: /actuator/health/readiness
-              port: 8081
-              scheme: HTTP
-            initialDelaySeconds: 5 #levanta despues mi container de 5 segundos
-            periodSeconds: 20  #se ejecuta un perido de 10 segundos de veirification
-            timeoutSeconds: 10
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8081
-              scheme: HTTP
-            initialDelaySeconds: 15
-            periodSeconds: 20
-            timeoutSeconds: 10
+          #readinessProbe:
+          #  httpGet:
+          #    path: /actuator/health/readiness
+          #    port: 8081
+          #    scheme: HTTP
+          #  initialDelaySeconds: 5 #levanta despues mi container de 5 segundos
+          #  periodSeconds: 20  #se ejecuta un perido de 10 segundos de veirification
+          #  timeoutSeconds: 10
+          #livenessProbe:
+          #  httpGet:
+          #    path: /actuator/health/liveness
+          #    port: 8081
+          #    scheme: HTTP
+          #  initialDelaySeconds: 15
+          #  periodSeconds: 20
+          #  timeoutSeconds: 10
           #definition of resources
           resources:
             requests:

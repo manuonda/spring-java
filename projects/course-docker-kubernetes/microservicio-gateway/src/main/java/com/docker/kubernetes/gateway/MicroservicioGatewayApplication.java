@@ -2,12 +2,14 @@ package com.docker.kubernetes.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-public class MsvcGatewayApplication {
+@EnableDiscoveryClient
+public class MicroservicioGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsvcGatewayApplication.class, args);
+		SpringApplication.run(MicroservicioGatewayApplication.class, args);
 	}
 
 }
