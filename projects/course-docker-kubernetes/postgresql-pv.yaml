@@ -6,6 +6,7 @@ spec:
   capacity:
     storage: 1Gi
   volumeMode: Filesystem
+  # minikube storageClassName: standard
   storageClassName: standard
   accessModes:
     - ReadWriteOnce
