@@ -8,7 +8,7 @@
 		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.docker.kubernetes.usuarios</groupId>
+	<groupId>com.docker.kubernetes.usuarios.auth</groupId>
 	<artifactId>microservicio-curso</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservicio-curso</name>
