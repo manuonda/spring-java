@@ -1,10 +1,10 @@
-package com.docker.kubernetes.usuarios.microservicioauth;
+package com.course.testing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MicroservicioAuthApplicationTests {
+class MsvcTestingApplicationTests {
 
 	@Test
 	void contextLoads() {

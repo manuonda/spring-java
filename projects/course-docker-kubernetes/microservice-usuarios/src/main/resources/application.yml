@@ -13,7 +13,21 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: true
-
+  security:
+    oauth2:
+      client:
+        registration:
+          msvc-usuarios-client:  # lo tomo de SecurityConfig / redirectUri
+            provider: spring
+            client-id: ${CLIENT_ID:usuarios-client} #.clientId("usuarios-client")
+            client-secret: ${CLIENT_SECRET:12345678} #.clientSecret("{noop}123456")
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://127.0.0.1:8081/authorized"
+            scope: read
+            client-name: msvc-usuarios-client
+        provider:
+          spring:
+            issure-uri:
 
 
   #configurcion spring cloud

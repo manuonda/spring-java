@@ -1,4 +1,4 @@
-package com.docker.kubernetes.usuarios.microservicioauth;
+package com.docker.kubernetes.usuarios.msvc.auth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgresql-container
+    ports:
+      - "5432:5432"
+    environment:
+      - 'POSTGRES_USER=root'
+      - 'POSTGRES_PASSWORD=root'
+      - 'POSTGRES_DB=db_course'
+    volumes:
+      - ./data_postgresql:/var/lib/postgresql/data
+    networks:
+      - spring
+
+
+
+#volumes
+volumes:
+  postgesql_data:
+
+networks:
+  spring:
+    name: spring
