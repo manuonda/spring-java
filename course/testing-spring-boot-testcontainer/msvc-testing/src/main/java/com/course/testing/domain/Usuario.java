@@ -1,4 +1,4 @@
-package com.course.testing.domain.entity;
+package com.course.testing.domain;
 
 
 import jakarta.persistence.*;
@@ -10,8 +10,8 @@ import lombok.*;
 @NoArgsConstructor
 @Builder //pattern Builder
 @Entity
-@Table(name="tbl_employee" )
-public class Employee {
+@Table(name="tbl_usuario" )
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
