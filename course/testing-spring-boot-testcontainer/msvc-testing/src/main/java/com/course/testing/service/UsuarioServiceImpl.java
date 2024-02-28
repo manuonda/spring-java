@@ -6,6 +6,7 @@ import com.course.testing.exception.ResourceNotFoundException;
 import com.course.testing.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,5 +29,10 @@ public class UsuarioServiceImpl implements UsuarioService{
         }
 
         return this.usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public List<Usuario> getAllUsuarios() {
+        return this.usuarioRepository.findAll();
     }
 }
