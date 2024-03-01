@@ -22,8 +22,8 @@ import java.util.Optional;
 
 import static org.assertj.core.api.FactoryBasedNavigableListAssert.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.*;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -128,5 +128,77 @@ public class UsuarioServiceTests {
         verify(this.usuarioRepository).findAll();
     }
 
+
+    // Junit Test methdo para buscar empleado by Id
+    @Test
+    @DisplayName("Junit Test obtiene un usuario por el id de Usuario")
+    public void givenUsuario_whenBuscarPorIdUsuario_returnObjectUsuario(){
+        //given
+        BDDMockito.given(this.usuarioRepository.findById(anyLong())).willReturn(Optional.of(this.usuario));
+
+        //when
+        Usuario usuarioFind = this.usuarioService.getUsuarioById(usuario.getId()).get();
+
+        //then
+        Assertions.assertThat(usuarioFind).isNotNull();
+       Assertions.assertThat(usuarioFind.getId()).isGreaterThan(0);
+    }
+
+
+
+    // Junit Test para actualizar un usuario
+    @Test
+    @DisplayName("Junit Test actualizar usuario")
+    public void  givenUsuarioObject_whenUpdateUsuario_thenReturnObjectUsuario(){
+
+        //given
+        //Establecemos el comportamiento de findById
+        BDDMockito.given(this.usuarioRepository.findById(any())).willReturn(Optional.of(usuario));
+        BDDMockito.given(this.usuarioRepository.save(any())).willReturn(usuario);
+        usuario.setEmail("correo.prueba@gmail.com");
+        usuario.setFirstName("andres");
+        usuario.setLastName("roman");
+
+        //when
+        Usuario usuarioActualizado = this.usuarioService.updateUsuario(usuario);
+
+        //then
+        Assertions.assertThat(usuario.getEmail()).isEqualTo("correo.prueba@gmail.com");
+        Assertions.assertThat(usuario.getFirstName()).isEqualTo("andres");
+        Assertions.assertThat(usuario.getLastName()).isEqualTo("roman");
+    }
+
+
+    //Junit Testa para eliminar un usuario
+    @Test
+    @DisplayName("Junit Test para eliminar usuario")
+    public void givenObjectUsuario_whenDeleteUsuario_returnEmptyObject(){
+        //given
+        BDDMockito.given(this.usuarioRepository.findById(usuario.getId())).willReturn(Optional.of(usuario));
+
+        //when
+        usuarioService.deleteUsuarioById(usuario.getId());
+
+        //then
+        verify(usuarioRepository, times(1)).delete(usuario);
+    }
+
+
+    //Junit Test id no existe al eliminar el usuario - debe lanzar exception
+    @Test
+    @DisplayName("Junit Test id no existe al eliminar el usuario")
+    public void givenUsuarioNoExiste_whenDeleteUsuario_thenThrowsResourceNotFoundException(){
+
+        //given
+        BDDMockito.given(this.usuarioRepository.findById(any())).willReturn(Optional.empty());
+
+        //when
+        org.junit.jupiter.api.Assertions.assertThrows( ResourceNotFoundException.class, () -> {
+            usuarioService.deleteUsuarioById(usuario.getId());
+        }, "No existe el id del usuario a eliminar ");
+
+        //then
+        verify(usuarioRepository, never()).delete(any(Usuario.class));
+    }
 
 }

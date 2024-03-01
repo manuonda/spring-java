@@ -33,6 +33,42 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public List<Usuario> getAllUsuarios() {
+
         return this.usuarioRepository.findAll();
     }
+
+    @Override
+    public Optional<Usuario> getUsuarioById(Long id) {
+        Optional<Usuario> optionalUsuario = this.usuarioRepository.findById(id);
+
+        if (optionalUsuario.isEmpty()){
+            throw new ResourceNotFoundException("Usuario no encontrado por el id" + id);
+        }
+        return optionalUsuario;
+    }
+
+    @Override
+    public Usuario updateUsuario(Usuario usuario) {
+        Optional<Usuario> findUsuario = this.usuarioRepository.findById(usuario.getId());
+        if ( findUsuario.isEmpty()){
+            throw new ResourceNotFoundException("Usuario no existe con el id : " +usuario.getId());
+        }
+
+        Usuario usuarioUpdate = findUsuario.get();
+        usuarioUpdate.setFirstName(usuario.getFirstName());
+        usuarioUpdate.setLastName(usuario.getLastName());
+        usuarioUpdate.setEmail(usuario.getEmail());
+        return this.usuarioRepository.save(usuarioUpdate);
+
+    }
+
+    @Override
+    public void deleteUsuarioById(Long id) {
+       Optional<Usuario>  findUsuario = this.usuarioRepository.findById(id);
+       if( findUsuario.isEmpty()){
+           throw new ResourceNotFoundException("Usuario no existe con el id : " + id);
+       }
+       this.usuarioRepository.delete(findUsuario.get());
+    }
+
 }
