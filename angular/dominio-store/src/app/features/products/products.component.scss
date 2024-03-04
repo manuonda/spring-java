@@ -1,0 +1,16 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las tarjetas */
+  }
+  
+  .product-card {
+    flex: 0 1 calc(25% - 10px); /* Ajusta el 25% para controlar cuántas tarjetas quieres por fila, el -10px es para ajustar el espacio del gap */
+    /* Puedes ajustar el flex-basis o el calc() para controlar el tamaño de las tarjetas */
+  }
+  
+  mat-card {
+    width: 100%; /* Asegura que la tarjeta ocupe todo el espacio del contenedor .product-card */
+    box-sizing: border-box; /* Asegura que padding y border estén incluidos en el ancho total */
+  }
+  
