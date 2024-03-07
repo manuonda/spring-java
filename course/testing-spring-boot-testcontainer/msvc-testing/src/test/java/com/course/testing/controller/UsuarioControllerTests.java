@@ -19,6 +19,9 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @WebMvcTest(UsuarioController.class)
 public class UsuarioControllerTests {
 
@@ -63,6 +66,23 @@ public class UsuarioControllerTests {
                         CoreMatchers.is(usuario.getLastName())))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.email",
                         CoreMatchers.is(usuario.getEmail())));
+    }
+
+
+    //Test Junit obtener todos los usuarios
+    @Test
+    @DisplayName("")
+    public void given_when_then() {
+        //given - preparo nuestros datos
+        List<Usuario> usuarios = new ArrayList<>();
+        usuarios.add(Usuario.builder().firstName("david").lastName("garcia").email("david.garcia@gmail.com").build());
+        usuarios.add(Usuario.builder().firstName("andres").lastName("garcia").email("andres.garcia@gmail.com").build());
+        BDDMockito.given(this.usuarioService.getAllUsuarios()).willReturn(usuarios);
+
+        //when - acciones a realizar para testing
+
+
+        //then - verificamos la salida
     }
 
 
