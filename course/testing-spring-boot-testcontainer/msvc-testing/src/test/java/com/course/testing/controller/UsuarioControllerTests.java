@@ -5,22 +5,43 @@ import com.course.testing.domain.Usuario;
 import com.course.testing.service.UsuarioService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatchers;
-import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
+//json path
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+//get , post
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+
+//print
+import static  org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+
+// any
+import static org.mockito.ArgumentMatchers.any;
+
+// given
+import static org.mockito.BDDMockito.given;
+
+// is
+import static  org.hamcrest.CoreMatchers.is;
+
+
+
+
+
 
 @WebMvcTest(UsuarioController.class)
 public class UsuarioControllerTests {
@@ -49,40 +70,43 @@ public class UsuarioControllerTests {
                 .build();
 
         //Usamos mockito para emular el comportamiento del service de usuario
-        BDDMockito.given(this.usuarioService.guardar(ArgumentMatchers.any(Usuario.class)))
+         given(this.usuarioService.guardar(any(Usuario.class)))
                 .willAnswer((invocation) -> invocation.getArgument(0));
 
         //when - acciones a realizar para testing
-        ResultActions response = mockMvc.perform(MockMvcRequestBuilders
-                .post("/api/v1/usuarios/guardar")
+        ResultActions response = mockMvc.perform(post("/api/v1/usuarios/guardar")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(usuario)));
 
         //then - verificamos la salida
-        response.andExpect(MockMvcResultMatchers.status().isCreated())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.firstName",
-                        CoreMatchers.is(usuario.getFirstName())))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.lastName",
-                        CoreMatchers.is(usuario.getLastName())))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.email",
-                        CoreMatchers.is(usuario.getEmail())));
+        response.andExpect(status().isCreated())
+                .andExpect(jsonPath("$.firstName",
+                        is(usuario.getFirstName())))
+                .andExpect(jsonPath("$.lastName",
+                        is(usuario.getLastName())))
+                .andExpect(jsonPath("$.email",
+                        is(usuario.getEmail())));
     }
 
 
     //Test Junit obtener todos los usuarios
     @Test
-    @DisplayName("")
-    public void given_when_then() {
+    @DisplayName("Junit Method listar usuarios")
+    public void given_when_then() throws Exception {
         //given - preparo nuestros datos
         List<Usuario> usuarios = new ArrayList<>();
         usuarios.add(Usuario.builder().firstName("david").lastName("garcia").email("david.garcia@gmail.com").build());
         usuarios.add(Usuario.builder().firstName("andres").lastName("garcia").email("andres.garcia@gmail.com").build());
-        BDDMockito.given(this.usuarioService.getAllUsuarios()).willReturn(usuarios);
+        given(this.usuarioService.getAllUsuarios()).willReturn(usuarios);
 
         //when - acciones a realizar para testing
-
+        ResultActions resultActions = mockMvc.perform(get("/api/v1/usuarios/listar")
+                .contentType(MediaType.APPLICATION_JSON));
 
         //then - verificamos la salida
+        resultActions.andExpect(status().isOk())
+                .andDo(print())
+                .andExpect(jsonPath("$.size()", is(usuarios.size())));
     }
 
 

@@ -35,7 +35,7 @@ public class UsuarioController {
 
 
 
-    @GetMapping("/list")
+    @GetMapping("/listar")
     public ResponseEntity<List<Usuario>> getAllUsuarios(){
         List<Usuario> usuarios = this.usuarioService.getAllUsuarios();
         return ResponseEntity.status(HttpStatus.OK).body(usuarios);
