@@ -6,3 +6,19 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+
+  .mat-card-header{
+    background-color: #00796b;
+    color: #fff;
+  }
+
+  .mat-card-content{
+    background-color: #226860;
+    color: #fff;
+  }
+
+  .mat-button-action{
+   background-color: orange;
+   color: #fff;
+  }

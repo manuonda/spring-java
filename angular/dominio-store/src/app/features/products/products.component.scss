@@ -13,4 +13,33 @@
     width: 100%; /* Asegura que la tarjeta ocupe todo el espacio del contenedor .product-card */
     box-sizing: border-box; /* Asegura que padding y border estén incluidos en el ancho total */
   }
+
+  .product-card {
+    mat-card {
+      background-color: #f0f0f0; // Cambia el color de fondo
+      border-radius: 8px; // Bordes redondeados
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); // Sombra suave para dar profundidad
+  
+      mat-card-header {
+        background-color: #00796b; // Color de fondo para el encabezado
+        color: #fff; // Color del texto para el título y subtítulo
+      }
+  
+      mat-card-content {
+        color: #b81818; // Color del texto del contenido
+      }
+  
+      mat-card-actions {
+        background-color: #e0e0e0; // Color de fondo para la sección de acciones
+        button {
+          color: #00796b; // Color del texto del botón
+        }
+      }
+  
+      img {
+        height: 200px; // Altura fija para las imágenes
+        object-fit: cover; // Asegura que la imagen cubra el espacio disponible
+      }
+    }
+  }
   

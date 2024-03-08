@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input  } from '@angular/core';
 
 @Component({
   selector: 'app-details',
@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export  default class DetailsComponent {
 
+
+   @Input({alias:'id'}) productId!: number;
 }
