@@ -7,7 +7,7 @@ services:
     environment:
       - 'POSTGRES_USER=root'
       - 'POSTGRES_PASSWORD=root'
-      - 'POSTGRES_DB=db_course'
+      - 'POSTGRES_DB=db_course_testing'
     volumes:
       - ./data_postgresql:/var/lib/postgresql/data
     networks:
