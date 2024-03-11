@@ -42,5 +42,33 @@ public class UsuarioController {
     }
 
 
+    @GetMapping("{id}")
+    public ResponseEntity<Usuario> getByIdUsuario(@PathVariable("id") Long id){
+      return this.usuarioService.getUsuarioById(id)
+              .map(ResponseEntity::ok)
+              .orElseGet(()-> ResponseEntity.notFound().build());
+
+    }
+
+
+    @PutMapping("{id}")
+    public ResponseEntity<Usuario> updateUsuario(@PathVariable("id") Long id, @RequestBody @Valid Usuario usuario){
+        return this.usuarioService.getUsuarioById(id)
+                .map(savedEmployee -> {
+                 savedEmployee.setFirstName(usuario.getFirstName());
+                 savedEmployee.setLastName(usuario.getLastName());
+                 savedEmployee.setEmail(usuario.getLastName());
+                 Usuario updatedUsuario = this.usuarioService.updateUsuario(usuario);
+                 return  ResponseEntity.status(HttpStatus.OK).body(updatedUsuario);
+
+                }).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteUsuario(@PathVariable("id") Long idUsuario){
+        this.usuarioService.deleteUsuarioById(idUsuario);
+        return ResponseEntity.status(HttpStatus.OK).body("Usuario delete");
+    }
+
 
 }

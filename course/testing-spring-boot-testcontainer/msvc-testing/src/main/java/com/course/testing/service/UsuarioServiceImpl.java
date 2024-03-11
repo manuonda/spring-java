@@ -48,7 +48,7 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    public Usuario updateUsuario(Usuario usuario) {
+    public Usuario updateUsuario(Usuario usuario ) {
         Optional<Usuario> findUsuario = this.usuarioRepository.findById(usuario.getId());
         if ( findUsuario.isEmpty()){
             throw new ResourceNotFoundException("Usuario no existe con el id : " +usuario.getId());
