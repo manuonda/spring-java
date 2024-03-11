@@ -5,6 +5,7 @@ import com.course.testing.domain.Usuario;
 import com.course.testing.service.UsuarioService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +17,17 @@ import org.springframework.test.web.servlet.ResultActions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 //json path
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.BDDMockito.willDoNothing;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 //get , post
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 //print
 import static  org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -91,7 +94,7 @@ public class UsuarioControllerTests {
 
     //Test Junit obtener todos los usuarios
     @Test
-    @DisplayName("Junit Method listar usuarios")
+    @DisplayName("Test Junit Method listar usuarios")
     public void given_when_then() throws Exception {
         //given - preparo nuestros datos
         List<Usuario> usuarios = new ArrayList<>();
@@ -108,6 +111,148 @@ public class UsuarioControllerTests {
                 .andDo(print())
                 .andExpect(jsonPath("$.size()", is(usuarios.size())));
     }
+
+    //Test Junit Method get usuario by Id
+    @Test
+    @DisplayName("Test Junit Method get usuario by id ")
+    public void givenObjectUsuario_whenGetByIdUsuario_thenReturnObjectUsuario() throws Exception {
+
+        Long idUsuario = 1L;
+        //given - preparo nuestros datos
+        Usuario usuario = Usuario.builder()
+                .firstName("david")
+                .lastName("garcia")
+                .email("david.garcia@gmail.com")
+                .build();
+
+        given(this.usuarioService.getUsuarioById(anyLong())).willReturn(Optional.of(usuario));
+
+        //when - acciones a realizar para testing
+        ResultActions resultActions = mockMvc.perform(get("/api/v1/usuarios/{id}", idUsuario)
+                .contentType(MediaType.APPLICATION_JSON));
+
+        //then - verificamos la salida
+        resultActions.andExpect(status().isOk())
+                .andDo(print())
+                .andExpect(jsonPath("$.firstName",
+                        is(usuario.getFirstName())))
+                .andExpect(jsonPath("$.lastName",
+                        is(usuario.getLastName())))
+                .andExpect(jsonPath("$.email",
+                        is(usuario.getEmail()))) ;
+    }
+
+
+    //Test Junit Failed usuario no existe by id
+    @Test
+    @DisplayName("Test Junit Method Failed get usuario by id ")
+    public void givenInvalidUsuarioId_whenGetByIdUsuario_thenReturnObjectEmpty() throws Exception {
+
+        Long idUsuario = 1L;
+
+        given(this.usuarioService.getUsuarioById(anyLong())).willReturn(Optional.empty());
+
+        //when - acciones a realizar para testing
+        ResultActions resultActions = mockMvc.perform(get("/api/v1/usuarios/{id}", idUsuario)
+                .contentType(MediaType.APPLICATION_JSON));
+
+        //then - verificamos la salida
+        resultActions.andExpect(status().isNotFound())
+                .andDo(print());
+    }
+
+
+    //Test for junit update Usuario
+    @Test
+    @DisplayName("Test Junit method actualizar usuario")
+    public void givenObjectUsuario_whenUpdateUsuario_thenReturnObjectUsuario() throws Exception {
+        //given - preparo nuestros datos
+        Long idUsuario  =1L;
+        Usuario usuario = Usuario.builder()
+                .firstName("david")
+                .lastName("garcia")
+                .email("david.garcia@gmail.com")
+                .build();
+
+        Usuario usuarioUpdate = Usuario.builder()
+
+                .firstName("andres")
+                .lastName("gonzalez")
+                .email("andres.gonzalez@gmail.com")
+                .build();
+
+        given(usuarioService.getUsuarioById(idUsuario)).willReturn(Optional.of(usuario));
+        given(usuarioService.updateUsuario(any(Usuario.class)))
+                .willAnswer((invocation) -> invocation.getArgument(0));
+
+
+        //when - acciones a realizar para testing
+        ResultActions resultActions  = mockMvc.perform(put("/api/v1/usuarios/{id}", idUsuario)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(usuarioUpdate)));
+
+        //then - verificamos la salida
+        resultActions.andExpect(status().isOk())
+                .andDo(print())
+                .andExpect(jsonPath("$.firstName", is(usuarioUpdate.getFirstName())))
+                .andExpect(jsonPath("$.lastName", is(usuarioUpdate.getLastName())))
+                .andExpect(jsonPath("$.email", is(usuarioUpdate.getEmail())));
+
+    }
+
+
+
+    //Test for junit update Usuario - negative scenario
+    @Test
+    @DisplayName("Test Junit method actualizar usuario - negative scenario")
+    public void givenObjectUsuario_whenUpdateUsuario_thenReturn404() throws Exception {
+        //given - preparo nuestros datos
+        Long idUsuario  =1L;
+        Usuario usuario = Usuario.builder()
+                .firstName("david")
+                .lastName("garcia")
+                .email("david.garcia@gmail.com")
+                .build();
+
+        Usuario usuarioUpdate = Usuario.builder()
+
+                .firstName("andres")
+                .lastName("gonzalez")
+                .email("andres.gonzalez@gmail.com")
+                .build();
+
+        given(usuarioService.getUsuarioById(idUsuario)).willReturn(Optional.empty());
+        given(usuarioService.updateUsuario(any(Usuario.class)))
+                .willAnswer((invocation) -> invocation.getArgument(0));
+
+
+        //when - acciones a realizar para testing
+        ResultActions resultActions  = mockMvc.perform(put("/api/v1/usuarios/{id}", idUsuario)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(usuarioUpdate)));
+
+        //then - verificamos la salida
+        resultActions.andExpect(status().isNotFound())
+                .andDo(print());
+    }
+
+    //Test for delete usuario by id
+    @Test
+    @DisplayName("Test Delete Usuario by Id")
+    public void givenObjectUsuario_whenDeleteUsuarioById_thenReturn200() throws Exception {
+        //given - preparo nuestros datos
+         Long idUsuario =1L;
+         willDoNothing().given(usuarioService).deleteUsuarioById(idUsuario);
+
+        //when - acciones a realizar para testing
+        ResultActions resultActions = this.mockMvc.perform(delete("/api/v1/usuarios/{id}",idUsuario));
+
+        //then - verificamos la salida
+        resultActions.andExpect(status().isOk())
+                .andDo(print());
+    }
+
+
 
 
 
