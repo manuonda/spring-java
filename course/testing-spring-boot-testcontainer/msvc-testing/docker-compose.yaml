@@ -7,9 +7,10 @@ services:
     environment:
       - 'POSTGRES_USER=root'
       - 'POSTGRES_PASSWORD=root'
-      - 'POSTGRES_DB=db_course_testing'
+      - 'POSTGRES_DB=db_course_test'
     volumes:
       - ./data_postgresql:/var/lib/postgresql/data
+      - ./scripts:/docker-entrypoint-initdb.d  # Monta el directorio 'scripts' en el contenedor
     networks:
       - spring
 
