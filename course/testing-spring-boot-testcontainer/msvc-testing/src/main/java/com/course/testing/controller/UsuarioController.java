@@ -57,8 +57,8 @@ public class UsuarioController {
                 .map(savedEmployee -> {
                  savedEmployee.setFirstName(usuario.getFirstName());
                  savedEmployee.setLastName(usuario.getLastName());
-                 savedEmployee.setEmail(usuario.getLastName());
-                 Usuario updatedUsuario = this.usuarioService.updateUsuario(usuario);
+                 savedEmployee.setEmail(usuario.getEmail());
+                 Usuario updatedUsuario = this.usuarioService.updateUsuario(savedEmployee);
                  return  ResponseEntity.status(HttpStatus.OK).body(updatedUsuario);
 
                 }).orElseGet(() -> ResponseEntity.notFound().build());

@@ -157,7 +157,7 @@ public class UsuarioControllerITests {
                 .email("david.garcia@gmail.com")
                 .build();
 
-        this.usuarioRepository.save(usuarioSaved);
+        Usuario usuario = this.usuarioRepository.save(usuarioSaved);
 
         Usuario usuarioUpdate = Usuario.builder()
 
@@ -167,10 +167,11 @@ public class UsuarioControllerITests {
                 .build();
 
 
+        System.out.println("usuario" + usuarioSaved.getId());
 
 
         //when - acciones a realizar para testing
-        ResultActions resultActions  = mockMvc.perform(put("/api/v1/usuarios/{id}", usuarioSaved.getId())
+        ResultActions resultActions  = mockMvc.perform(put("/api/v1/usuarios/{id}", 1L)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(usuarioUpdate)));
 
