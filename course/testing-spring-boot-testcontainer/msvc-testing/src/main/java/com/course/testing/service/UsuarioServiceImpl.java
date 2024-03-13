@@ -39,12 +39,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public Optional<Usuario> getUsuarioById(Long id) {
-        Optional<Usuario> optionalUsuario = this.usuarioRepository.findById(id);
-
-        if (optionalUsuario.isEmpty()){
-            throw new ResourceNotFoundException("Usuario no encontrado por el id" + id);
-        }
-        return optionalUsuario;
+        return this.usuarioRepository.findById(id);
     }
 
     @Override
