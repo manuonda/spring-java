@@ -1,4 +1,6 @@
-# Para levantar la base de datos es lo siguiente :
-docker compose up 
-# Para ejecutar el archivo de script de base de datos es el siguiente:
-docker exec -it postgresql-container psql -U root -d postgres -f /docker-entrypoint-initdb.d/create_database.sql
+## Project Demo de Testing Unitario , De Integracion. Test Containers
+
+### - Project de Test de las capas siguientes: Layer Repository, Service, Controller. Sobre la Clase Usuario 
+### - Indicando test Unitarios y Test de Integration.
+
+
