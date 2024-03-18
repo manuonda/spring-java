@@ -22,4 +22,5 @@ export interface Product{
     image: string; 
     qty: number;
     subTotal: number;
+    rating: any;
 }
