@@ -65,6 +65,7 @@ public class UsuarioServiceTests {
 
         //then - verificamos la salida
         Assertions.assertThat(usuarioSaved).isNotNull();
+        Assertions.assertThat(usuarioSaved.getId()).isGreaterThan(0);
     }
 
 
